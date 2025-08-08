@@ -3,6 +3,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import { useSharedContext } from "sharedContext/useSharedContext";
 
 const MfeBookList = React.lazy(() => import("MfeBookList/MfeBookListApp"));
 
@@ -48,8 +49,12 @@ const genres = [
 
 export default function VerticalTabs() {
     const [value, setValue] = React.useState(0);
+    const { updateGenres } = useSharedContext();
 
-    const handleChange = (event, newValue) => setValue(newValue);
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+        updateGenres(genres[newValue]);
+    };
 
     return (
         <Box

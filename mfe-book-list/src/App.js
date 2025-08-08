@@ -3,15 +3,22 @@ import { DataGrid } from '@mui/x-data-grid';
 import { Box, Avatar, Typography, Button } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { useSharedContext } from "sharedContext/useSharedContext";
+
 const App = () => {
   const [counter, setCounter] = useState(0);
   const { value, updateSharedState } = useSharedContext();
   const { bookList } = useSelector((state) => state?.bookList);
-  console.log("Books in MFE1 :", bookList ?? {});
+  const { genres } = useSharedContext();
 
   const handleAddToCart = (book) => {
     console.log("Adding to cart:", book);
   };
+
+  const filteredBooks = genres && genres !== 'ALL' ? bookList.filter(
+    (book) => book.work.genre === genres
+  ) : bookList;
+
+  console.log(filteredBooks);
 
   const columns = [
     {
@@ -19,7 +26,7 @@ const App = () => {
       headerName: 'Cover',
       width: 80,
       renderCell: (params) => (
-        <Avatar src={params.value} variant="square" sx={{ width: 50, height: 70 }} />
+        <Avatar src={params.value} variant="square" sx={{ width: 70, height: 70 }} />
       )
     },
     { field: 'title', headerName: 'Title', width: 220 },
@@ -28,23 +35,27 @@ const App = () => {
       headerName: 'Authors',
       width: 250,
       renderCell: (params) => (
-        <Typography variant="body2">{params.value.join(', ')}</Typography>
+        <Typography variant="body2" sx={{ wordWrap: 'break-word', textWrap: 'wrap' }}>{params.value.join(', ')}</Typography>
       )
     },
+    { field: 'genre', headerName: 'Genre', width: 100 },
     { field: 'year', headerName: 'Published', width: 100, type: 'number' },
     { field: 'price', headerName: 'Price ($)', width: 100, type: 'number' },
-    { field: 'action', headerName: 'Action', width: 160, renderCell: (params) => (
-        <Button variant="contained" color="primary" onClick={() => handleAddToCart(params.row)} sx={{'&:hover': { bgcolor: 'secondary.main' }}}>
+    {
+      field: 'action', headerName: 'Action', width: 160, renderCell: (params) => (
+        <Button variant="contained" color="primary" onClick={() => handleAddToCart(params.row)} sx={{ '&:hover': { bgcolor: 'secondary.main' } }}>
           Add to Cart
         </Button>
-      )}
+      )
+    }
   ];
 
-  const rows = bookList?.map((book, index) => ({
+  const rows = filteredBooks?.map((book, index) => ({
     id: index,
     cover: book.work.cover_image,
     title: book.work.title,
     authors: book.work.author_names,
+    genre: book.work.genre,
     year: book.work.first_publish_year,
     price: book.work.price
   }));
@@ -54,7 +65,7 @@ const App = () => {
     <>
       {/* <h1>Remote 1's counter: {counter} : {value}</h1>
       <button onClick={() => { updateSharedState(counter => counter + 1); setCounter(counter => counter + 1) }}>increment</button> */}
-      <Box sx={{ height: 500, width: 'auto', p: 2 }}>
+      <Box sx={{ height: 'calc(100vh - 180px)', flexGrow: 1, padding: 2 }}>
         <Typography variant="h6" gutterBottom>
           Book List ({bookList?.numFound} Found)
         </Typography>
@@ -64,6 +75,13 @@ const App = () => {
           pageSize={5}
           rowsPerPageOptions={[5]}
           disableRowSelectionOnClick
+          sx={{
+            '& .MuiDataGrid-row': {
+              '&:hover': {
+                backgroundColor: '#f5f5f5'
+              }
+            }
+          }}
         />
       </Box>
     </>
