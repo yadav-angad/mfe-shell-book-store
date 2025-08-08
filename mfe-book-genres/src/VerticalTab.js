@@ -74,7 +74,6 @@ export default function VerticalTabs() {
             </Tabs>
             {genres.map((genre, index) => (
                 <TabPanel key={genre} value={value} index={index}>
-                    {genre}
                     <React.Suspense fallback={<div>Loading Book List...</div>}>
                         <MfeBookList genre={genre} />
                     </React.Suspense>

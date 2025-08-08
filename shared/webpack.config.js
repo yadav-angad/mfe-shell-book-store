@@ -28,6 +28,7 @@ module.exports = {
       exposes: {
         "./SharedContextProvider": "./src/context/SharedContextProvider.js",
         "./useSharedContext": "./src/context/useSharedContext.js",
+        "./store": "./src/store/store.js",
       },
       shared: {
         react: {
