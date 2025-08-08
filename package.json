@@ -1,0 +1,27 @@
+{
+  "name": "module-federation-with-react",
+  "version": "1.0.0",
+  "description": "experiments with module federation in React with Webpack5",
+  "main": "index.js",
+  "repository": "https://github.com/yadav-angad/mfe-shell-book-store",
+  "author": "Angad Yadav",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "host",
+      "mfe-book-genres",
+      "mfe-book-list",
+      "mfe-checkout",
+      "mfe-header",
+      "mfe-user",
+      "shared"
+    ]
+  },
+  "scripts": {
+    "start": "concurrently \"cd shared; yarn start\" \"cd mfe-header; yarn start\" \"cd mfe-user; yarn start\" \"cd mfe-book-genres; yarn start\" \"cd mfe-book-list; yarn start\" \"cd mfe-checkout; yarn start\" \"cd mfe-header; yarn start\" \"cd host; yarn start\""
+  },
+  "devDependencies": {
+    "concurrently": "7.3.0"
+  }
+}
