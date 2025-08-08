@@ -3,6 +3,7 @@ import React, { Suspense } from "react";
 import { useSharedContext } from "sharedContext/useSharedContext";
 
 const MfeHeader = React.lazy(() => import("MfeHeader/MfeHeaderApp"));
+const MfeBookGenres = React.lazy(() => import("MfeBookGenres/MfeBookGenresApp"));
 
 export default function () {
   const { value } = useSharedContext();
@@ -11,8 +12,9 @@ export default function () {
     <>
       <Suspense fallback={<div>Loading MFE1...</div>}>
         <MfeHeader />
-        <h1>Host Application</h1>
-      <p>Shared State: {value}</p>
+      </Suspense>
+      <Suspense fallback={<div>Loading MFE2...</div>}>
+        <MfeBookGenres />
       </Suspense>
     </>
   );
