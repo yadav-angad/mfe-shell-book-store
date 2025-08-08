@@ -2,6 +2,7 @@ const { ModuleFederationPlugin } = require("webpack").container;
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const dependencies = require("./package.json").dependencies;
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
   entry: "./src/index",
@@ -78,6 +79,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       chunks: ["main"],
+    }),
+    new ReactRefreshWebpackPlugin({
+      exclude: ["/node_modules/", "/bootstrap.js$/"],
     }),
   ],
 };
