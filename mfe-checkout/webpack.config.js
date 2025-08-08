@@ -36,7 +36,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "mMfeCheckout",
+      name: "MfeCheckout",
       filename: "remoteEntry.js",
       exposes: {
         "./MfeCheckoutApp": "./src/App",
