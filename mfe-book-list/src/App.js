@@ -3,8 +3,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import { Box, Avatar, Typography, Button } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { useSharedContext } from "sharedContext/useSharedContext";
-import BookTable from './BookTable';
-import { useDispatch } from 'react-redux';
+import { store } from 'sharedContext/store';
 
 const App = () => {
   const [counter, setCounter] = useState(0);
@@ -15,11 +14,10 @@ const App = () => {
   const { genres } = useSharedContext();
   const [page, setPage] = React.useState(0);
   const [pageSize, setPageSize] = React.useState(5);
-  const dispatch = useDispatch();
 
   const handleAddToCart = (book) => {
     console.log("Adding to cart:", book);
-    dispatch({ type: 'SET_CART', payload: [...cart, book] });
+    store.dispatch({ type: 'SET_CART', payload: book });
   };
 
   const filteredBooks = genres && genres !== 'ALL' ? bookList.filter(

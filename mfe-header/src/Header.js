@@ -32,20 +32,17 @@ export default function Header() {
             </Typography> */}
         <Suspense fallback={<div>Loading User...</div>}>
           <MfeUser />
+          <Typography variant="h6" sx={{ color: 'gray', marginLeft: '10px', marginRight: '10px' }}>
+            {` | `}
+          </Typography>
+          <Typography variant="h6" onClick={() => { updateSharedState(counter => counter + 1); setCounter(counter => counter + 1) }} sx={{ cursor: 'pointer', '&:hover': { textDecoration: 'underline' } }}>
+            {`Help`}
+          </Typography>
+          <Typography variant="h6" sx={{ color: 'gray', marginLeft: '10px', marginRight: '10px' }}>
+            {` | `}
+          </Typography>
+          <MfeCheckout />
         </Suspense>
-       <Typography variant="h6">
-          {`Account`}
-        </Typography>
-        <Typography variant="h6" sx={{ color: 'gray', marginLeft: '10px', marginRight: '10px' }}>
-          {` | `}
-        </Typography>
-        <Typography variant="h6">
-          {`Help`}
-        </Typography>
-        <Typography variant="h6" sx={{ color: 'gray', marginLeft: '10px', marginRight: '10px' }}>
-          {` | `}
-        </Typography>
-        <MfeCheckout />
       </Toolbar>
     </AppBar>
   );

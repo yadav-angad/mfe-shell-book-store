@@ -4,7 +4,7 @@ const initialState = {
     user: {},
     countryData: {},
     bookList: {},
-    cart: {}
+    cart: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -16,7 +16,14 @@ const reducer = (state = initialState, action) => {
         case 'SET_BOOK':
             return { ...state, bookList: action.payload };
         case 'SET_CART':
-            return { ...state, cart: action.payload };
+            console.log("Setting cart with payload:", action.payload);
+            return {
+                ...state,
+                cart: [
+                    ...state.cart, // fallback to empty array if somehow null
+                    action.payload
+                ]
+            };
         case 'SET_COUNTRY_DATA':
             return {
                 ...state,
