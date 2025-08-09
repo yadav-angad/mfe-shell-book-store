@@ -3,7 +3,8 @@ import { createStore } from 'redux';
 const initialState = {
     user: {},
     countryData: {},
-    bookList: {}
+    bookList: {},
+    cart: {}
 };
 
 const reducer = (state = initialState, action) => {
@@ -14,6 +15,8 @@ const reducer = (state = initialState, action) => {
             return { ...state, user: action.payload };
         case 'SET_BOOK':
             return { ...state, bookList: action.payload };
+        case 'SET_CART':
+            return { ...state, cart: action.payload };
         case 'SET_COUNTRY_DATA':
             return {
                 ...state,

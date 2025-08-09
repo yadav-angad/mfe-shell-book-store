@@ -4,17 +4,22 @@ import { Box, Avatar, Typography, Button } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { useSharedContext } from "sharedContext/useSharedContext";
 import BookTable from './BookTable';
+import { useDispatch } from 'react-redux';
 
 const App = () => {
   const [counter, setCounter] = useState(0);
   const { value, updateSharedState } = useSharedContext();
+  // const { bookList, cart } = useSelector((state) => state);
   const { bookList } = useSelector((state) => state?.bookList);
+  const { cart } = useSelector((state) => state?.cart);
   const { genres } = useSharedContext();
   const [page, setPage] = React.useState(0);
   const [pageSize, setPageSize] = React.useState(5);
+  const dispatch = useDispatch();
 
   const handleAddToCart = (book) => {
     console.log("Adding to cart:", book);
+    dispatch({ type: 'SET_CART', payload: [...cart, book] });
   };
 
   const filteredBooks = genres && genres !== 'ALL' ? bookList.filter(

@@ -43,9 +43,9 @@ module.exports = {
       },
       remotes: {
         host: "host@http://localhost:3000/remoteEntry.js",
-        MfeCheckout: "MfeHeader@http://localhost:3003/remoteEntry.js",
+        MfeCheckout: "MfeCheckout@http://localhost:3003/remoteEntry.js",
         MfeBookGenres: "MfeBookGenres@http://localhost:3004/remoteEntry.js",
-        MfeBookList: "MfeCheckout@http://localhost:3005/remoteEntry.js",
+        MfeBookList: "MfeBookList@http://localhost:3005/remoteEntry.js",
         MfeUser: "MfeUser@http://localhost:3006/remoteEntry.js",
         sharedContext: "sharedContext@http://localhost:3001/remoteEntry.js",
       },
