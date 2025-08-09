@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 import { useSharedContext } from "sharedContext/useSharedContext";
 import { store } from 'sharedContext/store';
 import {
@@ -13,106 +12,132 @@ import {
   Button,
   Divider,
   Box,
+  IconButton
 } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 
 const App = () => {
-  const [counter, setCounter] = useState(0);
   const { value, updateSharedState } = useSharedContext();
-  const [showCheckoutForm, setShowCheckoutForm] = useState(false);
-  const cart = store.getState().cart;
-  console.log('Cart contents:', store.getState().cart);
+  const cart = store.getState().cart.map(item => ({
+    ...item,
+    quantity: item.quantity || 1 // default quantity = 1
+  }));
+
+  const [cartItems, setCartItems] = useState(cart);
+
   const [form, setForm] = useState({
     name: "",
     email: "",
     address: "",
   });
 
-  const total = cart?.reduce((sum, item) => sum + item.price, 0);
+  const total = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const updateQuantity = (index, newQty) => {
+    if (newQty < 1) return; // prevent zero or negative
+    const updated = [...cartItems];
+    updated[index].quantity = newQty;
+    setCartItems(updated);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Order placed for ${form.name}!\nTotal: $${total.toFixed(2)}`);
   };
+
   return (
-    <>
-      <Typography variant="h6" onClick={() => { setShowCheckoutForm(true); updateSharedState(counter => counter + 1); setCounter(counter => counter + 1) }} sx={{ cursor: 'pointer', '&:hover': { textDecoration: 'underline' } }}>
-        {`Cart (${store.getState().cart?.length || 0})`}
-      </Typography>
-      {/* <button onClick={() => { updateSharedState(counter => counter + 1); setCounter(counter => counter + 1)}}>increment</button> */}
-      {showCheckoutForm && (
-        <Container maxWidth="md" sx={{ py: 4 }}>
-          {/* Cart Items */}
-          <Grid container spacing={2}>
-            {cart?.map((book, index) => (
-              <Grid item xs={12} key={index}>
-                <Card sx={{ display: "flex", alignItems: "center", p: 1 }}>
-                  <CardMedia
-                    component="img"
-                    sx={{ width: 80, height: 120, objectFit: "cover", mr: 2 }}
-                    image={book.cover_image}
-                    alt={book.title}
-                  />
-                  <CardContent sx={{ flex: 1 }}>
-                    <Typography variant="h6">{book.title}</Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      by {book?.author_names?.join(", ")}
-                    </Typography>
-                    <Typography variant="subtitle1" color="primary">
-                      ${book.price.toFixed(2)}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+    <Card sx={{ maxWidth: 800, margin: "20px auto", p: 2, bgcolor: "#F2F2f2" }}>
+      <Container maxWidth="md" sx={{ py: 4 }}>
+        {/* Cart Items */}
+        <Grid container spacing={2}>
+          {cartItems.map((book, index) => (
+            <Grid item xs={12} key={index}>
+              <Card sx={{ display: "flex", alignItems: "center", p: 1 }}>
+                <CardMedia
+                  component="img"
+                  sx={{ width: 80, height: 120, objectFit: "cover", mr: 2 }}
+                  image={book.cover}
+                  alt={book.title}
+                />
+                <CardContent sx={{ flex: 1 }}>
+                  <Typography variant="h6">{book.title}</Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    by {book?.authors?.join(", ")}
+                  </Typography>
+                  <Typography variant="subtitle1" color="primary">
+                    ${book.price.toFixed(2)} × {book.quantity} = ${(book.price * book.quantity).toFixed(2)}
+                  </Typography>
 
-          <Divider sx={{ my: 3 }} />
+                  {/* Quantity Controls */}
+                  <Box sx={{ display: "flex", alignItems: "center", mt: 1 }}>
+                    <IconButton
+                      size="small"
+                      onClick={() => updateQuantity(index, book.quantity - 1)}
+                    >
+                      <RemoveIcon />
+                    </IconButton>
+                    <Typography sx={{ mx: 1 }}>{book.quantity}</Typography>
+                    <IconButton
+                      size="small"
+                      onClick={() => updateQuantity(index, book.quantity + 1)}
+                    >
+                      <AddIcon />
+                    </IconButton>
+                  </Box>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
 
-          {/* Total */}
-          <Typography variant="h6" sx={{ mb: 2 }}>
-            Total: ${total.toFixed(2)}
-          </Typography>
+        <Divider sx={{ my: 3 }} />
 
-          {/* Checkout Form */}
-          <Box component="form" onSubmit={handleSubmit} sx={{ display: "grid", gap: 2 }}>
-            <TextField
-              name="name"
-              label="Full Name"
-              variant="outlined"
-              value={form.name}
-              onChange={handleChange}
-              required
-            />
-            <TextField
-              name="email"
-              label="Email Address"
-              type="email"
-              variant="outlined"
-              value={form.email}
-              onChange={handleChange}
-              required
-            />
-            <TextField
-              name="address"
-              label="Shipping Address"
-              multiline
-              rows={3}
-              variant="outlined"
-              value={form.address}
-              onChange={handleChange}
-              required
-            />
-            <Button variant="contained" color="primary" type="submit" size="large">
-              Place Order
-            </Button>
-          </Box>
-        </Container>
-      )}
-    </>
+        <Typography variant="h6" sx={{ mb: 2 }}>
+          Total: ${total.toFixed(2)}
+        </Typography>
+
+        <Box component="form" onSubmit={handleSubmit} sx={{ display: "grid", gap: 2, p: 2, borderRadius: 1 }}>
+          <TextField
+            name="name"
+            label="Full Name"
+            variant="outlined"
+            value={form.name}
+            onChange={handleChange}
+            required
+            sx={{ bgcolor: 'background.paper' }}
+          />
+          <TextField
+            name="email"
+            label="Email Address"
+            type="email"
+            variant="outlined"
+            value={form.email}
+            onChange={handleChange}
+            required
+            sx={{ bgcolor: 'background.paper' }}
+          />
+          <TextField
+            name="address"
+            label="Shipping Address"
+            multiline
+            rows={3}
+            variant="outlined"
+            value={form.address}
+            onChange={handleChange}
+            required
+            sx={{ bgcolor: 'background.paper' }}
+          />
+          <Button variant="contained" color="primary" type="submit" size="large">
+            Place Order
+          </Button>
+        </Box>
+      </Container>
+    </Card>
   );
 };
 
