@@ -1,28 +1,33 @@
+// HostApp.jsx
 import React, { Suspense } from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import * as BookStore from './book.json';
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Home";
 
-import { useSharedContext } from "sharedContext/useSharedContext";
-
+const MfeCheckout = React.lazy(() => import("MfeCheckout/MfeCheckoutApp"));
 const MfeHeader = React.lazy(() => import("MfeHeader/MfeHeaderApp"));
-const MfeBookGenres = React.lazy(() => import("MfeBookGenres/MfeBookGenresApp"));
 
-export default function () {
-  const { value } = useSharedContext();
-  const { bookList } = useSelector((state) => state?.bookList);
-  const dispatch = useDispatch();
-
-  React.useEffect(() => {
-    dispatch({ type: "SET_BOOK", payload: BookStore?.books });
-  }, [BookStore?.books]);
-
+export default function HostApp() {
   return (
-    <>
-      <Suspense fallback={<div>Loading ...</div>}>
+    <Router basename="/">
+      <Suspense fallback={<div>Loading Header...</div>}>
         <MfeHeader />
-        <MfeBookGenres />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home />
+          }
+        />
+        <Route
+          path="/checkout"
+          element={
+            <React.Suspense fallback={<div>Loading MFE...</div>}>
+              <MfeCheckout />
+            </React.Suspense>
+          }
+        />
+      </Routes>
       </Suspense>
-    </>
+    </Router>
   );
 }

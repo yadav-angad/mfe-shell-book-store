@@ -15,9 +15,7 @@ module.exports = {
     hot: false,
     static: path.join(__dirname, 'dist'),
     port: 3000,
-    historyApiFallback: {
-      index: 'index.html',
-    },
+    historyApiFallback: true,
   },
   output: {
     publicPath: 'auto',
@@ -42,7 +40,7 @@ module.exports = {
       remotes: {
         sharedContext: 'sharedContext@http://localhost:3001/remoteEntry.js',
         MfeHeader: 'MfeHeader@http://localhost:3002/remoteEntry.js',
-        // MfeCheckout: 'MfeCheckout@http://localhost:3003/remoteEntry.js',
+        MfeCheckout: 'MfeCheckout@http://localhost:3003/remoteEntry.js',
         MfeBookGenres: 'MfeBookGenres@http://localhost:3004/remoteEntry.js',
         // MfeBookList: 'MfeBookList@http://localhost:3005/remoteEntry.js',
         // MfeUser: 'MfeUser@http://localhost:3006/remoteEntry.js'

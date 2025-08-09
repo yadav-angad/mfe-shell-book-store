@@ -16,6 +16,7 @@ module.exports = {
     static: path.join(__dirname, "dist"),
     port: 3003,
     liveReload: false,
+    historyApiFallback: true,
   },
   output: {
     publicPath: "auto",
