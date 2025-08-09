@@ -3,12 +3,15 @@ import { DataGrid } from '@mui/x-data-grid';
 import { Box, Avatar, Typography, Button } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { useSharedContext } from "sharedContext/useSharedContext";
+import BookTable from './BookTable';
 
 const App = () => {
   const [counter, setCounter] = useState(0);
   const { value, updateSharedState } = useSharedContext();
   const { bookList } = useSelector((state) => state?.bookList);
   const { genres } = useSharedContext();
+  const [page, setPage] = React.useState(0);
+  const [pageSize, setPageSize] = React.useState(5);
 
   const handleAddToCart = (book) => {
     console.log("Adding to cart:", book);
@@ -35,10 +38,10 @@ const App = () => {
       headerName: 'Authors',
       width: 250,
       renderCell: (params) => (
-        <Typography variant="body2" sx={{ wordWrap: 'break-word', textWrap: 'wrap' }}>{params.value.join(', ')}</Typography>
+        <Typography variant="body2" sx={{ wordWrap: 'break-word', textWrap: 'wrap', textAlign: 'left' }}>{params.value.join(', ')}</Typography>
       )
     },
-    { field: 'genre', headerName: 'Genre', width: 100 },
+    { field: 'genre', headerName: 'Genre', width: 150 },
     { field: 'year', headerName: 'Published', width: 100, type: 'number' },
     { field: 'price', headerName: 'Price ($)', width: 100, type: 'number' },
     {
@@ -67,19 +70,24 @@ const App = () => {
       <button onClick={() => { updateSharedState(counter => counter + 1); setCounter(counter => counter + 1) }}>increment</button> */}
       <Box sx={{ height: 'calc(100vh - 180px)', flexGrow: 1, padding: 2 }}>
         <Typography variant="h6" gutterBottom>
-          Book List ({bookList?.numFound} Found)
+          {`Book List (${bookList?.length} Found)`}
         </Typography>
         <DataGrid
           rows={rows}
-          columns={columns}
-          pageSize={5}
-          rowsPerPageOptions={[5]}
+          columns={columns.map(col => ({
+            ...col,
+            headerAlign: 'center'
+          }))}
           disableRowSelectionOnClick
+          pagination={false}
           sx={{
-            '& .MuiDataGrid-row': {
-              '&:hover': {
-                backgroundColor: '#f5f5f5'
-              }
+            '& .MuiDataGrid-cell': {
+              display: 'flex',
+              alignItems: 'center',
+              textAlign: 'center'
+            },
+            '& .MuiDataGrid-row:hover': {
+              backgroundColor: '#f5f5f5'
             }
           }}
         />
