@@ -44,7 +44,8 @@ module.exports = {
         "./SharedContextProvider": "./src/context/SharedContextProvider.js",
         "./useSharedContext": "./src/context/useSharedContext.js",
         "./store": "./src/store/store.js",
-        "./RemoteConfig": "./src/path/remote-config.js"
+        "./RemoteConfig": "./src/path/remote-config.js",
+        "./EventBusService": "./src/event-listener/event-bus.js"
       },
       shared: {
         react: {
