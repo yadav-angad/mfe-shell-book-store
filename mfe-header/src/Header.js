@@ -16,8 +16,6 @@ const MfeCheckout = React.lazy(() => import("MfeCheckout/MfeCheckoutApp"));
 
 export default function Header() {
   const { sharedState } = useSharedContext();
-  const { cart } = useSelector((state) => state?.cart);
-  console.log('cart =======>', cart?.cart ?? []);
   console.log('=======>', store?.getState().cart?.length || 0);
   return (
     <AppBar position="static">

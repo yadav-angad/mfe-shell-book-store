@@ -1,7 +1,19 @@
 import { createStore } from 'redux';
 
 const initialState = {
-    user: {},
+    user: {
+        userName: "yadav-angad",
+        firstName: "Angad",
+        lastName: "Yadav",
+        email: "yadav.angad@example.com",
+        phone: "123-456-7890",
+        gender: "male",
+        address: "123 Main St, Anytown, USA",
+        bio: "Software Developer",
+        currentPassword: "",
+        newPassword: "",
+        confirmPassword: "",
+    },
     countryData: {},
     bookList: {},
     cart: []

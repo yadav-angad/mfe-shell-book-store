@@ -11,23 +11,12 @@ import {
   MenuItem,
   Card
 } from "@mui/material";
+import { store } from 'sharedContext/store';
 
 const App = () => {
   const { value, updateSharedState } = useSharedContext();
 
-  const [formData, setFormData] = useState({
-    userName: "",
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    gender: "",
-    address: "",
-    bio: "",
-    currentPassword: "",
-    newPassword: "",
-    confirmPassword: "",
-  });
+  const [formData, setFormData] = useState(store.getState().user || {});
 
   const [errors, setErrors] = useState({});
 
