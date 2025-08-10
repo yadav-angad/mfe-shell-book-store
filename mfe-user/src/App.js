@@ -55,16 +55,16 @@ const App = () => {
     if (validate()) {
       EventBusService.fire('MESSAGE', {
         detail: {
-          message: 'INFO',
+          message: 'User information updated successfully',
+          type: 'success',
         }
       });
-    console.log("Profile Updated:", formData);
   }
 };
 
 return (
-  <Card sx={{ maxWidth: 800, margin: "20px auto", p: 2, bgcolor: "#F2F2f2" }}>
-    <Container maxWidth="md" sx={{ py: 4 }}>
+  <Card sx={{ maxWidth: 800, margin: "20px auto", p: 1, bgcolor: "#F2F2f2" }}>
+    <Container maxWidth="md">
       <Box sx={{ my: 4 }}>
         <Box display="flex" flexDirection="column" alignItems="center" mb={3}>
           <Avatar sx={{ width: 80, height: 80, bgcolor: "primary.main", mb: 2 }}>

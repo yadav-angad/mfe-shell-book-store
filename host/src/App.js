@@ -15,12 +15,7 @@ const MfeUser = React.lazy(() => import("MfeUser/MfeUserApp"));
 export default function HostApp() {
   const showAlert = (event) => {
     const { detail } = event;
-    toast(<>
-      {detail.message === 'SUCCESS' && <Alert severity="success">This is a success Alert.</Alert>}
-      {detail.message === 'INFO' && <Alert severity="info">This is an info Alert.</Alert>}
-      {detail.message === 'WARNING' && <Alert severity="warning">This is a warning Alert.</Alert>}
-      {detail.message === 'ERROR' && <Alert severity="error">This is an error Alert.</Alert>}
-    </>);
+    toast(<Alert severity={detail?.type}>{detail?.message}</Alert>);
   };
 
   React.useEffect(() => {
