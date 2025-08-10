@@ -16,6 +16,7 @@ import {
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import { EventBusService } from "sharedContext/EventBusService";
 
 const App = () => {
   const { value, updateSharedState } = useSharedContext();
@@ -47,7 +48,12 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Order placed for ${form.name}!\nTotal: $${total.toFixed(2)}`);
+    EventBusService.fire('MESSAGE', {
+      detail: {
+        message: `Order placed for ${form.name}!\nTotal: $${total.toFixed(2)}`,
+        type: 'success',
+      }
+    });
   };
 
   return (
