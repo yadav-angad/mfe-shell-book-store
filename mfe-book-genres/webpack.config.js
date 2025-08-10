@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const dependencies = require("./package.json").dependencies;
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const REMOTE_CONFIG = require('../shared/src/path/remote-config.js');
 
 module.exports = {
   entry: "./src/index",
@@ -13,7 +14,7 @@ module.exports = {
   },
   devServer: {
     hot: true,
-    static: path.join(__dirname, "dist"),
+    static: path.join(__dirname, "build"),
     port: 3004,
     liveReload: false,
   },

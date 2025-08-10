@@ -53,7 +53,6 @@ const App = () => {
   return (
     <Card sx={{ maxWidth: 800, margin: "20px auto", p: 2, bgcolor: "#F2F2f2" }}>
       <Container maxWidth="md" sx={{ py: 4 }}>
-        {/* Cart Items */}
         <Grid container spacing={2}>
           {cartItems.map((book, index) => (
             <Grid item xs={12} key={index}>
@@ -73,7 +72,6 @@ const App = () => {
                     ${book.price.toFixed(2)} × {book.quantity} = ${(book.price * book.quantity).toFixed(2)}
                   </Typography>
 
-                  {/* Quantity Controls */}
                   <Box sx={{ display: "flex", alignItems: "center", mt: 1 }}>
                     <IconButton
                       size="small"

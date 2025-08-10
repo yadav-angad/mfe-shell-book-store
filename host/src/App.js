@@ -5,6 +5,7 @@ import Home from "./Home";
 
 const MfeCheckout = React.lazy(() => import("MfeCheckout/MfeCheckoutApp"));
 const MfeHeader = React.lazy(() => import("MfeHeader/MfeHeaderApp"));
+const MfeUser = React.lazy(() => import("MfeUser/MfeUserApp"));
 
 export default function HostApp() {
   return (
@@ -23,6 +24,14 @@ export default function HostApp() {
           element={
             <React.Suspense fallback={<div>Loading MFE...</div>}>
               <MfeCheckout />
+            </React.Suspense>
+          }
+        />
+        <Route
+          path="/user"
+          element={
+            <React.Suspense fallback={<div>Loading MFE...</div>}>
+              <MfeUser />
             </React.Suspense>
           }
         />

@@ -43,7 +43,7 @@ module.exports = {
         MfeCheckout: 'MfeCheckout@http://localhost:3003/remoteEntry.js',
         MfeBookGenres: 'MfeBookGenres@http://localhost:3004/remoteEntry.js',
         // MfeBookList: 'MfeBookList@http://localhost:3005/remoteEntry.js',
-        // MfeUser: 'MfeUser@http://localhost:3006/remoteEntry.js'
+        MfeUser: 'MfeUser@http://localhost:3006/remoteEntry.js'
       },
       exposes: {},
       shared: {

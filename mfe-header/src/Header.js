@@ -52,7 +52,13 @@ export default function Header() {
               {`Counter: ${sharedState ?? 0}`}
             </Typography> */}
         <Suspense fallback={<div>Loading User...</div>}>
-          <MfeUser />
+           <Link
+            href="/#/user"
+            underline="none" // remove default underline
+            sx={linkStyle}
+          >
+            {`My Account`}
+          </Link>
           <Typography variant="h6" sx={{ color: 'gray', marginLeft: '10px', marginRight: '10px' }}>
             {` | `}
           </Typography>

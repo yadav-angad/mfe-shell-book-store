@@ -1,11 +1,26 @@
+const { output } = require("../mfe-book-genres/webpack.config");
+const path = require('path');
 const { ModuleFederationPlugin } = require("webpack").container;
 const dependencies = require("./package.json").dependencies;
+const REMOTE_CONFIG = require('../shared/src/path/remote-config.js');
 
 module.exports = {
   entry: "./src/context/SharedContextProvider.js", // Or a common entry point
   mode: "development",
   devServer: {
     port: 3001, // Port for your shared-context
+    hot: true,
+    static: path.join(__dirname, "build"),
+    liveReload: false,
+  },
+  output: {
+    publicPath: "auto",
+  },
+   resolve: {
+    alias: {
+      '@shared': path.resolve(__dirname, '../shared'),
+    },
+    extensions: ['.js', '.jsx', '.json'],
   },
   module: {
     rules: [
@@ -29,6 +44,7 @@ module.exports = {
         "./SharedContextProvider": "./src/context/SharedContextProvider.js",
         "./useSharedContext": "./src/context/useSharedContext.js",
         "./store": "./src/store/store.js",
+        "./RemoteConfig": "./src/path/remote-config.js"
       },
       shared: {
         react: {
