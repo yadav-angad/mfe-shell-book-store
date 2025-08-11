@@ -21,7 +21,7 @@ jobs:
        run: |
           git config --global user.email "yadavangad100@gmail.com"
           git config --global user.name "yadav-angad"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}   
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}   
      - name: Deploy to GitHub Pages
        uses: peaceiris/actions-gh-pages@v4
        with:
