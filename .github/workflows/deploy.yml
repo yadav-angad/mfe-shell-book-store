@@ -34,4 +34,4 @@ jobs:
         run: yarn deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./packages/host/dist
+          publish_dir: ./host/dist
