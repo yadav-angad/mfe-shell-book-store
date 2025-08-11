@@ -5,6 +5,32 @@ const dependencies = require("./package.json").dependencies;
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const REMOTE_CONFIG = require('../shared/src/path/remote-config.js');
 
+const isLocalhost = false;
+
+const URL_CONFIG = {
+  SHARED_CONTEXT: isLocalhost
+    ? "http://localhost:3001/remoteEntry.js"
+    : "https://yadav-angad.github.io/mfe-shell-book-store/shared/remoteEntry.js",
+  MFE_HEADER: isLocalhost
+    ? "http://localhost:3002/remoteEntry.js"
+    : "https://yadav-angad.github.io/mfe-shell-book-store/mfe-header/remoteEntry.js",
+  MFE_CHECKOUT: isLocalhost
+    ? "http://localhost:3003/remoteEntry.js"
+    : "https://yadav-angad.github.io/mfe-shell-book-store/mfe-checkout/remoteEntry.js",
+  MFE_BOOK_GENRES: isLocalhost
+    ? "http://localhost:3004/remoteEntry.js"
+    : "https://yadav-angad.github.io/mfe-shell-book-store/mfe-book-genres/remoteEntry.js",
+  MFE_BOOK_LIST: isLocalhost
+    ? "http://localhost:3005/remoteEntry.js"
+    : "https://yadav-angad.github.io/mfe-shell-book-store/mfe-book-list/remoteEntry.js",
+  MFE_USER: isLocalhost
+    ? "http://localhost:3006/remoteEntry.js"
+    : "https://yadav-angad.github.io/mfe-shell-book-store/mfe-user/remoteEntry.js",
+  HOST: isLocalhost
+    ? "http://localhost:3000/remoteEntry.js"
+    : "https://yadav-angad.github.io/mfe-shell-book-store/host/remoteEntry.js",
+};
+
 module.exports = {
   entry: "./src/index",
   mode: "development",
@@ -47,12 +73,12 @@ module.exports = {
         "./MfeUserApp": "./src/App",
       },
       remotes: {
-        host: "host@http://localhost:3000/remoteEntry.js",
-        MfeBookList: "host@http://localhost:3005/remoteEntry.js",
-        MfeHeader: "MfeHeader@http://localhost:3002/remoteEntry.js",
-        MfeBookGenres: "host@http://localhost:3004/remoteEntry.js",
-        MfeCheckout: "host@http://localhost:3003/remoteEntry.js",
-        sharedContext: "sharedContext@http://localhost:3001/remoteEntry.js",
+        host: `host@${URL_CONFIG.HOST}`,
+        sharedContext: `sharedContext@${URL_CONFIG.SHARED_CONTEXT}`,
+        MfeCheckout: `MfeHeader@${URL_CONFIG.MFE_CHECKOUT}`,
+        MfeBookList: `MfeBookList@${URL_CONFIG.MFE_BOOK_LIST}`,
+        MfeBookGenres: `MfeBookGenres@${URL_CONFIG.MFE_BOOK_GENRES}`,
+        MfeHeader: `MfeHeader@${URL_CONFIG.MFE_HEADER}`,
       },
       shared: {
         react: {

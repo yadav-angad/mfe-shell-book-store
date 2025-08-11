@@ -4218,7 +4218,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gh-pages@npm:^6.3.0":
+"gh-pages@npm:6.3.0, gh-pages@npm:^6.3.0":
   version: 6.3.0
   resolution: "gh-pages@npm:6.3.0"
   dependencies:
@@ -5525,6 +5525,7 @@ __metadata:
   resolution: "module-federation-with-react@workspace:."
   dependencies:
     concurrently: "npm:7.3.0"
+    gh-pages: "npm:6.3.0"
   languageName: unknown
   linkType: soft
 
