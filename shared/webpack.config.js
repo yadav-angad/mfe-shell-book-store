@@ -10,7 +10,7 @@ module.exports = {
   devServer: {
     port: 3001, // Port for your shared-context
     hot: true,
-    static: path.join(__dirname, "build"),
+    static: path.join(__dirname, "dist"),
     liveReload: false,
   },
   output: {
