@@ -46,7 +46,7 @@ module.exports = {
     historyApiFallback: true,
   },
   output: {
-    publicPath: "auto",
+    publicPath: 'https://yadav-angad.github.io/mfe-shell-book-store/mfe-checkout',
     clean: true,
   },
   module: {
