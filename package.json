@@ -21,7 +21,7 @@
   "scripts": {
     "start": "concurrently \"cd shared; yarn start\" \"cd mfe-header; yarn start\" \"cd mfe-user; yarn start\" \"cd mfe-book-genres; yarn start\" \"cd mfe-book-list; yarn start\" \"cd mfe-checkout; yarn start\" \"cd host; yarn start\"",
     "build": "yarn workspace sharedContext build && yarn workspace mfe-user build && yarn workspace mfe-header build && yarn workspace mfe-checkout build && yarn workspace mfe-book-list build && yarn workspace mfe-book-genres build && yarn workspace host build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d packages/host/dist"
   },
   "devDependencies": {
     "concurrently": "7.3.0",
