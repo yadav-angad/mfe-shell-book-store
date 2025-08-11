@@ -40,7 +40,7 @@ module.exports = {
   },
   devServer: {
     hot: true,
-    static: path.join(__dirname, "dist"),
+    static: path.join(__dirname, '../../dist/mfe-book-genres'),
     port: 3004,
     liveReload: false,
   },

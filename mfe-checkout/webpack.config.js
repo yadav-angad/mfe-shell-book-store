@@ -40,7 +40,7 @@ module.exports = {
   },
   devServer: {
     hot: true,
-    static: path.join(__dirname, "dist"),
+    static: path.join(__dirname, '../../dist/mfe-checkout'),
     port: 3003,
     liveReload: false,
     historyApiFallback: true,

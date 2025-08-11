@@ -40,7 +40,7 @@ module.exports = {
   },
   devServer: {
     hot: true,
-    static: path.join(__dirname, "dist"),
+    static: path.join(__dirname, '../../dist/mfe-book-list'),
     port: 3005,
     liveReload: false,
   },
