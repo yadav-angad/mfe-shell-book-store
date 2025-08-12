@@ -14,7 +14,7 @@ module.exports = {
     liveReload: false,
   },
   output: {
-    publicPath: '/mfe-shell-book-store/shared',
+    publicPath: '/mfe-shell-book-store/shared/',
   },
    resolve: {
     alias: {

@@ -1,5 +1,5 @@
 {
-  "name": "sharedContext",
+  "name": "shared",
   "version": "1.0.0",
   "scripts": {
     "start": "webpack serve",

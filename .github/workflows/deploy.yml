@@ -1,32 +1,23 @@
-name: Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
-
-permissions:
-  contents: write
+    branches: [ main ]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Configure Git for GitHub Pages
-        run: |
-          git config --global user.email "yadavangad100@gmail.com"
-          git config --global user.name "yadav-angad"  
-
-      - name: Install and Build
-        run: |
-          yarn install
-          yarn build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: actions/setup-node@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./host/dist
+          node-version: 20
+          cache: yarn
+
+      - run: yarn install
+      - run: chmod +x deploy.sh
+
+      - run: yarn deploy
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}

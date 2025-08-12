@@ -44,7 +44,7 @@ module.exports = {
     historyApiFallback: true,
   },
   output: {
-    publicPath: '/mfe-shell-book-store/',
+    publicPath: '/mfe-shell-book-store/host/',
     clean: true,
   },
   module: {
