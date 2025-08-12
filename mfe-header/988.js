@@ -37,7 +37,7 @@
 
 const MfeUser = /*#__PURE__*/(/* unused pure expression or super */ null && (React.lazy(() => __webpack_require__.e(/* import() */ 989).then(__webpack_require__.t.bind(__webpack_require__, 3989, 23)))));
 const MfeCheckout = /*#__PURE__*/(/* unused pure expression or super */ null && (React.lazy(() => __webpack_require__.e(/* import() */ 985).then(__webpack_require__.t.bind(__webpack_require__, 5985, 23)))));
-const basePath =  true ? `${window.location.origin}/mfe-shell-book-store` : 0;
+const basePath = window.location.origin.includes('localhost') ? "/" : `${window.location.origin}/mfe-shell-book-store`;
 function Header() {
   const {
     sharedState

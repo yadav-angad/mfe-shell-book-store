@@ -64,7 +64,7 @@ var ReactToastify = __webpack_require__(1137);
 const MfeCheckout = /*#__PURE__*/index_js_default().lazy(() => __webpack_require__.e(/* import() */ 985).then(__webpack_require__.t.bind(__webpack_require__, 5985, 23)));
 const App_MfeHeader = /*#__PURE__*/index_js_default().lazy(() => __webpack_require__.e(/* import() */ 481).then(__webpack_require__.t.bind(__webpack_require__, 6481, 23)));
 const MfeUser = /*#__PURE__*/index_js_default().lazy(() => __webpack_require__.e(/* import() */ 989).then(__webpack_require__.t.bind(__webpack_require__, 3989, 23)));
-const basePath =  true ? `${window.location.origin}/mfe-shell-book-store/host` : 0;
+const basePath = window.location.origin.includes('localhost') ? "/" : `${window.location.origin}/mfe-shell-book-store/host`;
 function HostApp() {
   const showAlert = event => {
     const {
