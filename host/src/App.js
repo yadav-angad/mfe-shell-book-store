@@ -12,6 +12,11 @@ const MfeCheckout = React.lazy(() => import("MfeCheckout/MfeCheckoutApp"));
 const MfeHeader = React.lazy(() => import("MfeHeader/MfeHeaderApp"));
 const MfeUser = React.lazy(() => import("MfeUser/MfeUserApp"));
 
+const basePath =
+  process.env.NODE_ENV === "production"
+    ? `${window.location.origin}/mfe-shell-book-store/host`
+  : "/";
+
 export default function HostApp() {
   const showAlert = (event) => {
     const { detail } = event;
@@ -26,13 +31,13 @@ export default function HostApp() {
   }, [showAlert]);
 
   return (
-    <Router basename="/">
+    <Router basename={basePath}>
       <Suspense fallback={<div>Loading Header...</div>}>
         <MfeHeader />
         <ToastContainer />
         <Routes>
           <Route
-            path="/"
+            path={basePath}
             element={
               <Home />
             }
