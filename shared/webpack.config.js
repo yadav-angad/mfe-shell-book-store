@@ -6,7 +6,7 @@ const REMOTE_CONFIG = require('../shared/src/path/remote-config.js');
 
 module.exports = {
   entry: "./src/context/SharedContextProvider.js", // Or a common entry point
-  mode: "development",
+  mode: isLocalhost === 'production' ? 'production' : 'development',
   devServer: {
     port: 3001, // Port for your shared-context
     hot: true,

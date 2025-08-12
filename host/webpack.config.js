@@ -31,7 +31,7 @@ const URL_CONFIG = {
 
 module.exports = {
   entry: './src/index',
-  mode: 'development',
+  mode: isLocalhost === 'production' ? 'production' : 'development',
   devtool: 'source-map',
   optimization: {
     minimize: false,
