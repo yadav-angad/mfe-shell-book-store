@@ -25,7 +25,7 @@ const App = () => {
       headerName: 'Cover',
       width: 80,
       renderCell: (params) => (
-        <Avatar src={'params.value'} variant="square" sx={{ width: 70, height: 70 }} />
+        <Avatar src={params.value} variant="square" sx={{ width: 70, height: 70 }} />
       )
     },
     { field: 'title', headerName: 'Title', width: 220 },
