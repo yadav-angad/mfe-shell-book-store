@@ -13,7 +13,7 @@ import { useSelector } from "react-redux";
 
 const MfeUser = React.lazy(() => import("MfeUser/MfeUserApp"));
 const MfeCheckout = React.lazy(() => import("MfeCheckout/MfeCheckoutApp"));
-const basePath = window.location.origin.includes('localhost') ? "http://localhost:3000/#" : `${window.location.origin}/mfe-shell-book-store/host/#`;
+const basePath = window.location.origin.includes('localhost') ? "http://localhost:3000" : `${window.location.origin}/mfe-shell-book-store/host`;
 export default function Header() {
   const { sharedState } = useSharedContext();
   //Initialize the store to access the cart state
@@ -38,7 +38,7 @@ export default function Header() {
           sx={{ mr: 2 }}
         >
           <Link
-            href={`${basePath}/host`}
+            href={`${basePath}`}
             sx={linkStyle}
           >
             <HomeIcon />
@@ -52,7 +52,7 @@ export default function Header() {
             </Typography> */}
         <Suspense fallback={<div>Loading User...</div>}>
            <Link
-            href={`${basePath}/user`}
+            href={`${basePath}/$/user`}
             underline="none" // remove default underline
             sx={linkStyle}
           >
@@ -62,7 +62,7 @@ export default function Header() {
             {` | `}
           </Typography>
           <Link
-            href={`${basePath}/checkout`}
+            href={`${basePath}/#/checkout`}
             underline="none" // remove default underline
             sx={linkStyle}
           >
@@ -72,7 +72,7 @@ export default function Header() {
             {` | `}
           </Typography>
           <Link
-            href={`${basePath}/checkout`}
+            href={`${basePath}/#/checkout`}
             underline="none" // remove default underline
             sx={linkStyle}
           >
