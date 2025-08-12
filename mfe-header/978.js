@@ -49,7 +49,6 @@ var store = __webpack_require__(999);
 // EXTERNAL MODULE: consume shared module (default) react-redux@^9.2.0 (singleton) (fallback: ../node_modules/react-redux/dist/react-redux.mjs)
 var react_redux_mjs_ = __webpack_require__(7776);
 ;// ./src/Header.js
-var _s = $RefreshSig$();
 
 
 
@@ -62,12 +61,9 @@ var _s = $RefreshSig$();
 
 
 
-const MfeUser = /*#__PURE__*/index_js_default().lazy(_c = () => __webpack_require__.e(/* import() */ 989).then(__webpack_require__.t.bind(__webpack_require__, 3989, 23)));
-_c2 = MfeUser;
-const MfeCheckout = /*#__PURE__*/index_js_default().lazy(_c3 = () => __webpack_require__.e(/* import() */ 985).then(__webpack_require__.t.bind(__webpack_require__, 5985, 23)));
-_c4 = MfeCheckout;
+const MfeUser = /*#__PURE__*/(/* unused pure expression or super */ null && (React.lazy(() => __webpack_require__.e(/* import() */ 989).then(__webpack_require__.t.bind(__webpack_require__, 3989, 23)))));
+const MfeCheckout = /*#__PURE__*/(/* unused pure expression or super */ null && (React.lazy(() => __webpack_require__.e(/* import() */ 985).then(__webpack_require__.t.bind(__webpack_require__, 5985, 23)))));
 function Header() {
-  _s();
   const {
     sharedState
   } = (0,useSharedContext.useSharedContext)();
@@ -133,10 +129,6 @@ function Header() {
     sx: linkStyle
   }, `Cart (${store.store?.getState().cart?.length || 0})`))));
 }
-_s(Header, "wu2nic0iJupTHgypCkL8wXDuGdk=", false, function () {
-  return [useSharedContext.useSharedContext, react_redux_mjs_.useSelector];
-});
-_c5 = Header;
 const linkStyle = {
   cursor: "pointer",
   color: "inherit",
@@ -150,19 +142,11 @@ const linkStyle = {
     textDecoration: "underline"
   }
 };
-var _c, _c2, _c3, _c4, _c5;
-$RefreshReg$(_c, "MfeUser$React.lazy");
-$RefreshReg$(_c2, "MfeUser");
-$RefreshReg$(_c3, "MfeCheckout$React.lazy");
-$RefreshReg$(_c4, "MfeCheckout");
-$RefreshReg$(_c5, "Header");
 ;// ./src/App.js
-var App_s = $RefreshSig$();
 
 
 
 const App = () => {
-  App_s();
   const [counter, setCounter] = (0,index_js_.useState)(0);
   const {
     value,
@@ -170,13 +154,7 @@ const App = () => {
   } = (0,useSharedContext.useSharedContext)();
   return /*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment, null, /*#__PURE__*/index_js_default().createElement(Header, null));
 };
-App_s(App, "kz/l9nDuH+c4Pz9+fgfKNVLhnpw=", false, function () {
-  return [useSharedContext.useSharedContext];
-});
-App_c = App;
 /* harmony default export */ const src_App = (App);
-var App_c;
-$RefreshReg$(App_c, "App");
 // EXTERNAL MODULE: consume shared module (default) react-dom@^18.2.0 (singleton) (fallback: ../node_modules/react-dom/index.js)
 var react_dom_index_js_ = __webpack_require__(3476);
 var react_dom_index_js_default = /*#__PURE__*/__webpack_require__.n(react_dom_index_js_);

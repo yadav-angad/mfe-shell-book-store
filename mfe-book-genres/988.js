@@ -13,12 +13,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9739);
 /* harmony import */ var sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _VerticalTab__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6918);
-var _s = $RefreshSig$();
 
 
 
 const App = () => {
-  _s();
   const [counter, setCounter] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
   const {
     value,
@@ -26,13 +24,7 @@ const App = () => {
   } = (0,sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_1__.useSharedContext)();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_VerticalTab__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A, null));
 };
-_s(App, "kz/l9nDuH+c4Pz9+fgfKNVLhnpw=", false, function () {
-  return [sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_1__.useSharedContext];
-});
-_c = App;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
-var _c;
-$RefreshReg$(_c, "App");
 
 /***/ }),
 
@@ -50,7 +42,6 @@ $RefreshReg$(_c, "App");
 /* harmony import */ var _mui_material_Box__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(527);
 /* harmony import */ var sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(9739);
 /* harmony import */ var sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_5__);
-var _s = $RefreshSig$();
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 
 
@@ -58,11 +49,10 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
 
 
 
-const MfeBookList = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.lazy(_c = () => __webpack_require__.e(/* import() */ 425).then(__webpack_require__.t.bind(__webpack_require__, 6425, 23)));
+const MfeBookList = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.lazy(() => __webpack_require__.e(/* import() */ 425).then(__webpack_require__.t.bind(__webpack_require__, 6425, 23)));
 
 // Memoized TabPanel component
-_c2 = MfeBookList;
-const TabPanel = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(_c3 = ({
+const TabPanel = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(({
   children,
   value,
   index
@@ -80,7 +70,6 @@ const TabPanel = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(_c3 = ({
 });
 
 // a11y props
-_c4 = TabPanel;
 const a11yProps = index => ({
   id: `vertical-tab-${index}`,
   'aria-controls': `vertical-tabpanel-${index}`
@@ -89,7 +78,6 @@ const a11yProps = index => ({
 // Genre list
 const genres = ['ALL', 'Romance', 'Fantasy', 'Mystery', 'Thriller', 'Horror', 'Science Fiction', 'Historical Fiction', 'Young Adult', 'Literary Fiction', 'Biography', 'Action & Adventure'];
 function VerticalTabs() {
-  _s();
   const [value, setValue] = react__WEBPACK_IMPORTED_MODULE_0__.useState(0);
   const {
     updateGenres
@@ -133,16 +121,6 @@ function VerticalTabs() {
     genre: genre
   })))));
 }
-_s(VerticalTabs, "ZRwAuQ9HxaIW4gd8GSndkqMuO5c=", false, function () {
-  return [sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_5__.useSharedContext];
-});
-_c5 = VerticalTabs;
-var _c, _c2, _c3, _c4, _c5;
-$RefreshReg$(_c, "MfeBookList$React.lazy");
-$RefreshReg$(_c2, "MfeBookList");
-$RefreshReg$(_c3, "TabPanel$React.memo");
-$RefreshReg$(_c4, "TabPanel");
-$RefreshReg$(_c5, "VerticalTabs");
 
 /***/ })
 

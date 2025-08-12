@@ -17,7 +17,6 @@ var react_redux_mjs_ = __webpack_require__(7776);
 // EXTERNAL MODULE: remote sharedContext/useSharedContext
 var useSharedContext = __webpack_require__(9739);
 ;// ./src/App.js
-var _s = $RefreshSig$();
 
 
 
@@ -25,7 +24,6 @@ var _s = $RefreshSig$();
 
 
 const App = () => {
-  _s();
   const {
     bookList
   } = (0,react_redux_mjs_.useSelector)(state => state?.bookList);
@@ -136,13 +134,7 @@ const App = () => {
     }
   })));
 };
-_s(App, "A3ArTvWMMjK9pQQczCWMh6QsOsE=", false, function () {
-  return [react_redux_mjs_.useSelector, useSharedContext.useSharedContext, react_redux_mjs_.useDispatch];
-});
-_c = App;
 /* harmony default export */ const src_App = (App);
-var _c;
-$RefreshReg$(_c, "App");
 // EXTERNAL MODULE: consume shared module (default) react-dom@^18.2.0 (singleton) (fallback: ../node_modules/react-dom/index.js)
 var react_dom_index_js_ = __webpack_require__(3476);
 var react_dom_index_js_default = /*#__PURE__*/__webpack_require__.n(react_dom_index_js_);

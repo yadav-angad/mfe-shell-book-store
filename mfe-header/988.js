@@ -23,7 +23,6 @@
 /* harmony import */ var sharedContext_store__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(sharedContext_store__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(7776);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_10__);
-var _s = $RefreshSig$();
 
 
 
@@ -36,12 +35,9 @@ var _s = $RefreshSig$();
 
 
 
-const MfeUser = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().lazy(_c = () => __webpack_require__.e(/* import() */ 989).then(__webpack_require__.t.bind(__webpack_require__, 3989, 23)));
-_c2 = MfeUser;
-const MfeCheckout = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().lazy(_c3 = () => __webpack_require__.e(/* import() */ 985).then(__webpack_require__.t.bind(__webpack_require__, 5985, 23)));
-_c4 = MfeCheckout;
+const MfeUser = /*#__PURE__*/(/* unused pure expression or super */ null && (React.lazy(() => __webpack_require__.e(/* import() */ 989).then(__webpack_require__.t.bind(__webpack_require__, 3989, 23)))));
+const MfeCheckout = /*#__PURE__*/(/* unused pure expression or super */ null && (React.lazy(() => __webpack_require__.e(/* import() */ 985).then(__webpack_require__.t.bind(__webpack_require__, 5985, 23)))));
 function Header() {
-  _s();
   const {
     sharedState
   } = (0,sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_8__.useSharedContext)();
@@ -107,10 +103,6 @@ function Header() {
     sx: linkStyle
   }, `Cart (${sharedContext_store__WEBPACK_IMPORTED_MODULE_9__.store?.getState().cart?.length || 0})`))));
 }
-_s(Header, "wu2nic0iJupTHgypCkL8wXDuGdk=", false, function () {
-  return [sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_8__.useSharedContext, react_redux__WEBPACK_IMPORTED_MODULE_10__.useSelector];
-});
-_c5 = Header;
 const linkStyle = {
   cursor: "pointer",
   color: "inherit",
@@ -124,12 +116,6 @@ const linkStyle = {
     textDecoration: "underline"
   }
 };
-var _c, _c2, _c3, _c4, _c5;
-$RefreshReg$(_c, "MfeUser$React.lazy");
-$RefreshReg$(_c2, "MfeUser");
-$RefreshReg$(_c3, "MfeCheckout$React.lazy");
-$RefreshReg$(_c4, "MfeCheckout");
-$RefreshReg$(_c5, "Header");
 
 /***/ }),
 
@@ -165,12 +151,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9739);
 /* harmony import */ var sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1770);
-var _s = $RefreshSig$();
 
 
 
 const App = () => {
-  _s();
   const [counter, setCounter] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
   const {
     value,
@@ -178,13 +162,7 @@ const App = () => {
   } = (0,sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_1__.useSharedContext)();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Header__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A, null));
 };
-_s(App, "kz/l9nDuH+c4Pz9+fgfKNVLhnpw=", false, function () {
-  return [sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_1__.useSharedContext];
-});
-_c = App;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
-var _c;
-$RefreshReg$(_c, "App");
 
 /***/ }),
 

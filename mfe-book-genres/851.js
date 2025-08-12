@@ -19,7 +19,6 @@ var Typography = __webpack_require__(7109);
 // EXTERNAL MODULE: ../node_modules/@mui/material/Box/Box.js + 2 modules
 var Box = __webpack_require__(527);
 ;// ./src/VerticalTab.js
-var _s = $RefreshSig$();
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 
 
@@ -27,11 +26,10 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
 
 
 
-const MfeBookList = /*#__PURE__*/index_js_.lazy(_c = () => __webpack_require__.e(/* import() */ 425).then(__webpack_require__.t.bind(__webpack_require__, 6425, 23)));
+const MfeBookList = /*#__PURE__*/index_js_.lazy(() => __webpack_require__.e(/* import() */ 425).then(__webpack_require__.t.bind(__webpack_require__, 6425, 23)));
 
 // Memoized TabPanel component
-_c2 = MfeBookList;
-const TabPanel = /*#__PURE__*/index_js_.memo(_c3 = ({
+const TabPanel = /*#__PURE__*/index_js_.memo(({
   children,
   value,
   index
@@ -49,7 +47,6 @@ const TabPanel = /*#__PURE__*/index_js_.memo(_c3 = ({
 });
 
 // a11y props
-_c4 = TabPanel;
 const a11yProps = index => ({
   id: `vertical-tab-${index}`,
   'aria-controls': `vertical-tabpanel-${index}`
@@ -58,7 +55,6 @@ const a11yProps = index => ({
 // Genre list
 const genres = ['ALL', 'Romance', 'Fantasy', 'Mystery', 'Thriller', 'Horror', 'Science Fiction', 'Historical Fiction', 'Young Adult', 'Literary Fiction', 'Biography', 'Action & Adventure'];
 function VerticalTabs() {
-  _s();
   const [value, setValue] = index_js_.useState(0);
   const {
     updateGenres
@@ -102,23 +98,11 @@ function VerticalTabs() {
     genre: genre
   })))));
 }
-_s(VerticalTabs, "ZRwAuQ9HxaIW4gd8GSndkqMuO5c=", false, function () {
-  return [useSharedContext.useSharedContext];
-});
-_c5 = VerticalTabs;
-var _c, _c2, _c3, _c4, _c5;
-$RefreshReg$(_c, "MfeBookList$React.lazy");
-$RefreshReg$(_c2, "MfeBookList");
-$RefreshReg$(_c3, "TabPanel$React.memo");
-$RefreshReg$(_c4, "TabPanel");
-$RefreshReg$(_c5, "VerticalTabs");
 ;// ./src/App.js
-var App_s = $RefreshSig$();
 
 
 
 const App = () => {
-  App_s();
   const [counter, setCounter] = (0,index_js_.useState)(0);
   const {
     value,
@@ -126,13 +110,7 @@ const App = () => {
   } = (0,useSharedContext.useSharedContext)();
   return /*#__PURE__*/index_js_default().createElement("main", null, /*#__PURE__*/index_js_default().createElement(VerticalTabs, null));
 };
-App_s(App, "kz/l9nDuH+c4Pz9+fgfKNVLhnpw=", false, function () {
-  return [useSharedContext.useSharedContext];
-});
-App_c = App;
 /* harmony default export */ const src_App = (App);
-var App_c;
-$RefreshReg$(App_c, "App");
 // EXTERNAL MODULE: consume shared module (default) react-dom@^18.2.0 (singleton) (fallback: ../node_modules/react-dom/index.js)
 var react_dom_index_js_ = __webpack_require__(3476);
 var react_dom_index_js_default = /*#__PURE__*/__webpack_require__.n(react_dom_index_js_);

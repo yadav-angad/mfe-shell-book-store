@@ -21,7 +21,6 @@ var Remove = __webpack_require__(9161);
 // EXTERNAL MODULE: remote sharedContext/EventBusService
 var EventBusService = __webpack_require__(3099);
 ;// ./src/App.js
-var _s = $RefreshSig$();
 
 
 
@@ -30,7 +29,6 @@ var _s = $RefreshSig$();
 
 
 const App = () => {
-  _s();
   const {
     value,
     updateSharedState
@@ -188,13 +186,7 @@ const App = () => {
     size: "large"
   }, "Place Order"))));
 };
-_s(App, "xOJtfoaD128gsQwyn/V1iPyJd0A=", false, function () {
-  return [useSharedContext.useSharedContext];
-});
-_c = App;
 /* harmony default export */ const src_App = (App);
-var _c;
-$RefreshReg$(_c, "App");
 // EXTERNAL MODULE: consume shared module (default) react-dom@^18.2.0 (singleton) (fallback: ../node_modules/react-dom/index.js)
 var react_dom_index_js_ = __webpack_require__(3476);
 var react_dom_index_js_default = /*#__PURE__*/__webpack_require__.n(react_dom_index_js_);

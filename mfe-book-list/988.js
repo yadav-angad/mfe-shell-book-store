@@ -17,7 +17,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9739);
 /* harmony import */ var sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_4__);
-var _s = $RefreshSig$();
 
 
 
@@ -25,7 +24,6 @@ var _s = $RefreshSig$();
 
 
 const App = () => {
-  _s();
   const {
     bookList
   } = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector)(state => state?.bookList);
@@ -136,13 +134,7 @@ const App = () => {
     }
   })));
 };
-_s(App, "A3ArTvWMMjK9pQQczCWMh6QsOsE=", false, function () {
-  return [react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector, sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_4__.useSharedContext, react_redux__WEBPACK_IMPORTED_MODULE_3__.useDispatch];
-});
-_c = App;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
-var _c;
-$RefreshReg$(_c, "App");
 
 /***/ })
 

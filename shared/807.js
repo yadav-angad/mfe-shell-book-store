@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshared=self.webpackChunkshared||[]).push([[807],{807:(e,n,s)=>{s.r(n),s.d(n,{EventBusService:()=>i});var i={fire:function(e,n){var s=new CustomEvent(e,n);window.dispatchEvent(s)},subscribe:function(e,n){window.addEventListener(e,n)},unsubscribe:function(e,n){window.removeEventListener(e,n)}}}}]);

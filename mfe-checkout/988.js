@@ -20,7 +20,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mui_icons_material_Remove__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(9161);
 /* harmony import */ var sharedContext_EventBusService__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(3099);
 /* harmony import */ var sharedContext_EventBusService__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(sharedContext_EventBusService__WEBPACK_IMPORTED_MODULE_6__);
-var _s = $RefreshSig$();
 
 
 
@@ -29,7 +28,6 @@ var _s = $RefreshSig$();
 
 
 const App = () => {
-  _s();
   const {
     value,
     updateSharedState
@@ -187,13 +185,7 @@ const App = () => {
     size: "large"
   }, "Place Order"))));
 };
-_s(App, "xOJtfoaD128gsQwyn/V1iPyJd0A=", false, function () {
-  return [sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_1__.useSharedContext];
-});
-_c = App;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
-var _c;
-$RefreshReg$(_c, "App");
 
 /***/ }),
 
