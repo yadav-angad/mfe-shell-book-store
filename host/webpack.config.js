@@ -44,7 +44,7 @@ module.exports = {
     historyApiFallback: true,
   },
   output: {
-    publicPath: 'https://yadav-angad.github.io/mfe-shell-book-store/host/',
+    publicPath: '/mfe-shell-book-store/host/',
     clean: true,
   },
   module: {
