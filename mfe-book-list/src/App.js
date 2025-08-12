@@ -42,7 +42,7 @@ const App = () => {
     { field: 'price', headerName: 'Price ($)', width: 100, type: 'number' },
     {
       field: 'action', headerName: 'Action', width: 160, renderCell: (params) => (
-        <Button variant="contained" color="primary" onClick={() => handleAddToCart(params.row)} sx={{ '&:hover': { bgcolor: 'secondary.main' } }}>
+        <Button size="small" variant="outlined" color="primary" onClick={() => handleAddToCart(params.row)} sx={{ '&:hover': { bgcolor: '#F2F2F2' } }}>
           Add to Cart
         </Button>
       )
