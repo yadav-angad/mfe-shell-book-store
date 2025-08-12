@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import { store } from 'sharedContext/store';
 import { EventBusService } from "sharedContext/EventBusService";
+import avatarImg from './assets/Angad.jpg'; // adjust path
 
 const App = () => {
   const { value, updateSharedState } = useSharedContext();
@@ -67,9 +68,7 @@ return (
     <Container maxWidth="md">
       <Box sx={{ my: 4 }}>
         <Box display="flex" flexDirection="column" alignItems="center" mb={3}>
-          <Avatar sx={{ width: 80, height: 80, bgcolor: "primary.main", mb: 2 }}>
-            {formData.firstName ? formData.firstName[0] : "U"}
-          </Avatar>
+          <Avatar src={avatarImg} variant="square" sx={{ width: 150, height: 150, borderRadius: 100, mb: 2 }} />
           <Typography variant="h5">Edit Profile</Typography>
         </Box>
         <Box component="form" onSubmit={handleSubmit}>
