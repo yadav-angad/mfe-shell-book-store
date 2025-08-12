@@ -62,7 +62,3 @@ A modular **Microfrontend architecture** built with **React** and **Webpack Modu
 - Material UI (MUI)
 - Babel
 - GitHub Pages for deployment
-
-
-Visual Diagram:
-![alt text](mfe_book_store_architecture.png)
