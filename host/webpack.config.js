@@ -2,7 +2,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 const path = require('path');
 const dependencies = require("./package.json").dependencies;
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const isLocalhost = false;
 
 console.log('isLocalhost ===> ', isLocalhost);
@@ -105,9 +104,6 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
-    }),
-    new ReactRefreshWebpackPlugin({
-      exclude: ['/node_modules/', '/bootstrap.js$/'],
     }),
   ],
 };
