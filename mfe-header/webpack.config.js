@@ -45,7 +45,7 @@ module.exports = {
     liveReload: false,
   },
   output: {
-    publicPath: '/mfe-shell-book-store/mfe-header',
+    publicPath: 'https://yadav-angad.github.io/mfe-shell-book-store/mfe-header',
     clean: true,
   },
   module: {

@@ -45,7 +45,7 @@ module.exports = {
     liveReload: false,
   },
   output: {
-    publicPath: '/mfe-shell-book-store/book-genres/',
+    publicPath: 'https://yadav-angad.github.io/mfe-shell-book-store/mfe-book-genres/',
     clean: true,
   },
   module: {
