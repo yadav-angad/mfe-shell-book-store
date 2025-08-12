@@ -35,12 +35,12 @@ mkdir -p dist/mfe-header
 mkdir -p dist/mfe-user
 mkdir -p dist/shared
 
-cp -R packages/host/dist/* dist/
-cp -R packages/mfe-book-genres/dist/* dist/mfe-book-genres/
-cp -R packages/mfe-book-list/dist/* dist/mfe-book-list/
-cp -R packages/mfe-header/dist/* dist/mfe-header/
-cp -R packages/mfe-user/dist/* dist/mfe-user/
-cp -R packages/shared/dist/* dist/shared/
+cp -R host/dist/* dist/
+cp -R mfe-book-genres/dist/* dist/mfe-book-genres/
+cp -R mfe-book-list/dist/* dist/mfe-book-list/
+cp -R mfe-header/dist/* dist/mfe-header/
+cp -R mfe-user/dist/* dist/mfe-user/
+cp -R shared/dist/* dist/shared/
 
 # Deploy to GitHub Pages
 echo "🚀 Deploying to GitHub Pages..."
