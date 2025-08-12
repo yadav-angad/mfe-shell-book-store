@@ -100,7 +100,7 @@ function Header() {
   }, 'Online Book Store'), /*#__PURE__*/index_js_default().createElement(index_js_.Suspense, {
     fallback: /*#__PURE__*/index_js_default().createElement("div", null, "Loading User...")
   }, /*#__PURE__*/index_js_default().createElement(material_index_js_.Link, {
-    href: `${basePath}/$/user`,
+    href: `${basePath}/#/user`,
     underline: "none" // remove default underline
     ,
     sx: linkStyle

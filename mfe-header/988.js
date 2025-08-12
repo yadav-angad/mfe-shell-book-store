@@ -74,7 +74,7 @@ function Header() {
   }, 'Online Book Store'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react__WEBPACK_IMPORTED_MODULE_0__.Suspense, {
     fallback: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Loading User...")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Link, {
-    href: `${basePath}/$/user`,
+    href: `${basePath}/#/user`,
     underline: "none" // remove default underline
     ,
     sx: linkStyle
