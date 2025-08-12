@@ -22,7 +22,7 @@
   "scripts": {
     "dev": "concurrently \"cd shared; yarn dev\" \"cd mfe-header; yarn dev\" \"cd mfe-user; yarn dev\" \"cd mfe-book-genres; yarn dev\" \"cd mfe-book-list; yarn dev\" \"cd mfe-checkout; yarn dev\" \"cd host; yarn dev\"",
     "start": "concurrently \"cd shared; yarn start\" \"cd mfe-header; yarn start\" \"cd mfe-user; yarn start\" \"cd mfe-book-genres; yarn start\" \"cd mfe-book-list; yarn start\" \"cd mfe-checkout; yarn start\" \"cd host; yarn start\"",
-    "build": "yarn workspace shared build && yarn workspace mfe-user build && yarn workspace mfe-header build && yarn workspace mfe-checkout build && yarn workspace mfe-book-list build && yarn workspace mfe-book-genres build && yarn workspace host build:dev",
+    "build": "yarn workspace shared build && yarn workspace mfe-user build && yarn workspace mfe-header build && yarn workspace mfe-checkout build && yarn workspace mfe-book-list build && yarn workspace mfe-book-genres build && yarn workspace host build",
     "deploy": "./deploy.sh"
   },
   "devDependencies": {
