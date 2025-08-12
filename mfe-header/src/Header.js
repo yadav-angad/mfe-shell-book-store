@@ -52,7 +52,7 @@ export default function Header() {
             </Typography> */}
         <Suspense fallback={<div>Loading User...</div>}>
            <Link
-            href={`${basePath}/$/user`}
+            href={`${basePath}/#/user`}
             underline="none" // remove default underline
             sx={linkStyle}
           >
