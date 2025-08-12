@@ -12,10 +12,7 @@ const MfeCheckout = React.lazy(() => import("MfeCheckout/MfeCheckoutApp"));
 const MfeHeader = React.lazy(() => import("MfeHeader/MfeHeaderApp"));
 const MfeUser = React.lazy(() => import("MfeUser/MfeUserApp"));
 
-const basePath =
-  process.env.NODE_ENV === "production"
-    ? `${window.location.origin}/mfe-shell-book-store/host`
-  : "/";
+const basePath = window.location.origin.includes('localhost') ? "/" : `${window.location.origin}/mfe-shell-book-store/host`;
 
 export default function HostApp() {
   const showAlert = (event) => {

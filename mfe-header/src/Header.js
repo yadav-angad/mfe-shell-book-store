@@ -13,10 +13,7 @@ import { useSelector } from "react-redux";
 
 const MfeUser = React.lazy(() => import("MfeUser/MfeUserApp"));
 const MfeCheckout = React.lazy(() => import("MfeCheckout/MfeCheckoutApp"));
-const basePath =
-  process.env.NODE_ENV === "production"
-    ? `${window.location.origin}/mfe-shell-book-store`
-  : "/";
+const basePath = window.location.origin.includes('localhost') ? "/" : `${window.location.origin}/mfe-shell-book-store`;
 
 export default function Header() {
   const { sharedState } = useSharedContext();
