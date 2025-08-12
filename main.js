@@ -455,7 +455,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "https://yadav-angad.github.io/mfe-shell-book-store/host/";
+/******/ 		__webpack_require__.p = "/mfe-shell-book-store/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/consumes */
