@@ -13,7 +13,7 @@ import { useSelector } from "react-redux";
 
 const MfeUser = React.lazy(() => import("MfeUser/MfeUserApp"));
 const MfeCheckout = React.lazy(() => import("MfeCheckout/MfeCheckoutApp"));
-const basePath = window.location.origin.includes('localhost') ? "http://localhost:3000/#" : `${window.location.origin}/mfe-shell-book-store/host/#/`;
+const basePath = window.location.origin.includes('localhost') ? "http://localhost:3000/#" : `${window.location.origin}/mfe-shell-book-store/host/#`;
 export default function Header() {
   const { sharedState } = useSharedContext();
   //Initialize the store to access the cart state
