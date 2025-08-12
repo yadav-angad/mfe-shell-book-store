@@ -22,27 +22,6 @@ module.exports = new Promise((resolve, reject) => {
 
 /***/ }),
 
-/***/ 5577:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-var __webpack_error__ = new Error();
-module.exports = new Promise((resolve, reject) => {
-	if(typeof MfeHeader !== "undefined") return resolve();
-	__webpack_require__.l("https://yadav-angad.github.io/mfe-shell-book-store/mfe-checkout/remoteEntry.js", (event) => {
-		if(typeof MfeHeader !== "undefined") return resolve();
-		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
-		var realSrc = event && event.target && event.target.src;
-		__webpack_error__.message = 'Loading script failed.\n(' + errorType + ': ' + realSrc + ')';
-		__webpack_error__.name = 'ScriptExternalLoadError';
-		__webpack_error__.type = errorType;
-		__webpack_error__.request = realSrc;
-		reject(__webpack_error__);
-	}, "MfeHeader");
-}).then(() => (MfeHeader));
-
-/***/ }),
-
 /***/ 7111:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -68,6 +47,27 @@ module.exports = new Promise((resolve, reject) => {
 		reject(__webpack_error__);
 	}, "MfeUser");
 }).then(() => (MfeUser));
+
+/***/ }),
+
+/***/ 9406:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+var __webpack_error__ = new Error();
+module.exports = new Promise((resolve, reject) => {
+	if(typeof MfeCheckout !== "undefined") return resolve();
+	__webpack_require__.l("https://yadav-angad.github.io/mfe-shell-book-store/mfe-checkout/remoteEntry.js", (event) => {
+		if(typeof MfeCheckout !== "undefined") return resolve();
+		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+		var realSrc = event && event.target && event.target.src;
+		__webpack_error__.message = 'Loading script failed.\n(' + errorType + ': ' + realSrc + ')';
+		__webpack_error__.name = 'ScriptExternalLoadError';
+		__webpack_error__.type = errorType;
+		__webpack_error__.request = realSrc;
+		reject(__webpack_error__);
+	}, "MfeCheckout");
+}).then(() => (MfeCheckout));
 
 /***/ })
 
@@ -270,7 +270,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			"5985": [
 /******/ 				"default",
 /******/ 				"./MfeCheckoutApp",
-/******/ 				5577
+/******/ 				9406
 /******/ 			],
 /******/ 			"9739": [
 /******/ 				"default",
@@ -370,7 +370,7 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 					register("react", "18.3.1", () => (__webpack_require__.e(696).then(() => (() => (__webpack_require__(3696))))));
 /******/ 					initExternal(3036);
 /******/ 					initExternal(9014);
-/******/ 					initExternal(5577);
+/******/ 					initExternal(9406);
 /******/ 				}
 /******/ 				break;
 /******/ 			}

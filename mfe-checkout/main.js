@@ -1,14 +1,21 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 3036:
+/***/ 7111:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+Promise.all(/* import() */[__webpack_require__.e(836), __webpack_require__.e(232), __webpack_require__.e(476), __webpack_require__.e(45), __webpack_require__.e(319)]).then(__webpack_require__.bind(__webpack_require__, 5319));
+
+/***/ }),
+
+/***/ 9512:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 var __webpack_error__ = new Error();
 module.exports = new Promise((resolve, reject) => {
 	if(typeof sharedContext !== "undefined") return resolve();
-	__webpack_require__.l("https://yadav-angad.github.io/mfe-shell-book-store/shared/remoteEntry.js", (event) => {
+	__webpack_require__.l("sharedContext@https://yadav-angad.github.io/mfe-shell-book-store/shared/remoteEntry.js", (event) => {
 		if(typeof sharedContext !== "undefined") return resolve();
 		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 		var realSrc = event && event.target && event.target.src;
@@ -19,13 +26,6 @@ module.exports = new Promise((resolve, reject) => {
 		reject(__webpack_error__);
 	}, "sharedContext");
 }).then(() => (sharedContext));
-
-/***/ }),
-
-/***/ 7111:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-Promise.all(/* import() */[__webpack_require__.e(836), __webpack_require__.e(232), __webpack_require__.e(476), __webpack_require__.e(45), __webpack_require__.e(319)]).then(__webpack_require__.bind(__webpack_require__, 5319));
 
 /***/ })
 
@@ -183,17 +183,17 @@ Promise.all(/* import() */[__webpack_require__.e(836), __webpack_require__.e(232
 /******/ 			"999": [
 /******/ 				"default",
 /******/ 				"./store",
-/******/ 				3036
+/******/ 				9512
 /******/ 			],
 /******/ 			"3099": [
 /******/ 				"default",
 /******/ 				"./EventBusService",
-/******/ 				3036
+/******/ 				9512
 /******/ 			],
 /******/ 			"9739": [
 /******/ 				"default",
 /******/ 				"./useSharedContext",
-/******/ 				3036
+/******/ 				9512
 /******/ 			]
 /******/ 		};
 /******/ 		__webpack_require__.f.remotes = (chunkId, promises) => {
@@ -285,7 +285,7 @@ Promise.all(/* import() */[__webpack_require__.e(836), __webpack_require__.e(232
 /******/ 					register("@mui/material", "5.18.0", () => (Promise.all([__webpack_require__.e(836), __webpack_require__.e(909), __webpack_require__.e(232), __webpack_require__.e(476)]).then(() => (() => (__webpack_require__(6909))))));
 /******/ 					register("react-dom", "18.3.1", () => (Promise.all([__webpack_require__.e(325), __webpack_require__.e(232)]).then(() => (() => (__webpack_require__(8325))))));
 /******/ 					register("react", "18.3.1", () => (__webpack_require__.e(696).then(() => (() => (__webpack_require__(3696))))));
-/******/ 					initExternal(3036);
+/******/ 					initExternal(9512);
 /******/ 				}
 /******/ 				break;
 /******/ 			}
