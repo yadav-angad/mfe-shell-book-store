@@ -15,7 +15,7 @@ const MfeUser = React.lazy(() => import("MfeUser/MfeUserApp"));
 const MfeCheckout = React.lazy(() => import("MfeCheckout/MfeCheckoutApp"));
 const basePath =
   process.env.NODE_ENV === "production"
-    ? `${window.location.origin}/mfe-shell-book-store/`
+    ? `${window.location.origin}/mfe-shell-book-store`
   : "/";
 
 export default function Header() {
@@ -56,7 +56,7 @@ export default function Header() {
             </Typography> */}
         <Suspense fallback={<div>Loading User...</div>}>
            <Link
-            href="/#/user"
+            href={`${basePath}/host/#/user`}
             underline="none" // remove default underline
             sx={linkStyle}
           >
@@ -66,7 +66,7 @@ export default function Header() {
             {` | `}
           </Typography>
           <Link
-            href="/#/checkout"
+            href={`${basePath}/host/#/checkout`}
             underline="none" // remove default underline
             sx={linkStyle}
           >
