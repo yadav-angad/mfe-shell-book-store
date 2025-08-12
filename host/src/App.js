@@ -28,13 +28,13 @@ export default function HostApp() {
   }, [showAlert]);
 
   return (
-    <Router basename={basePath}>
+    <Router basename={"/"}>
       <Suspense fallback={<div>Loading Header...</div>}>
         <MfeHeader />
         <ToastContainer />
         <Routes>
           <Route
-            path={basePath}
+            path={"/"}
             element={
               <Home />
             }
