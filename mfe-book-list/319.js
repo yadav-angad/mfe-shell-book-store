@@ -86,12 +86,13 @@ const App = () => {
     headerName: 'Action',
     width: 160,
     renderCell: params => /*#__PURE__*/index_js_default().createElement(material_index_js_.Button, {
-      variant: "contained",
+      size: "small",
+      variant: "outlined",
       color: "primary",
       onClick: () => handleAddToCart(params.row),
       sx: {
         '&:hover': {
-          bgcolor: 'secondary.main'
+          bgcolor: '#F2F2F2'
         }
       }
     }, "Add to Cart")
