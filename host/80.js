@@ -81,11 +81,11 @@ function HostApp() {
     };
   }, [showAlert]);
   return /*#__PURE__*/index_js_default().createElement(chunk_ZYFC6VSF/* HashRouter */.I9, {
-    basename: basePath
+    basename: "/"
   }, /*#__PURE__*/index_js_default().createElement(index_js_.Suspense, {
     fallback: /*#__PURE__*/index_js_default().createElement("div", null, "Loading Header...")
   }, /*#__PURE__*/index_js_default().createElement(App_MfeHeader, null), /*#__PURE__*/index_js_default().createElement(react_toastify_esm/* ToastContainer */.N9, null), /*#__PURE__*/index_js_default().createElement(chunk_ZYFC6VSF/* Routes */.BV, null, /*#__PURE__*/index_js_default().createElement(chunk_ZYFC6VSF/* Route */.qh, {
-    path: basePath,
+    path: "/",
     element: /*#__PURE__*/index_js_default().createElement(Home, null)
   }), /*#__PURE__*/index_js_default().createElement(chunk_ZYFC6VSF/* Route */.qh, {
     path: "/checkout",
