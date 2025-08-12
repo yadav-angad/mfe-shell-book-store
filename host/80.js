@@ -64,6 +64,7 @@ var ReactToastify = __webpack_require__(1137);
 const MfeCheckout = /*#__PURE__*/index_js_default().lazy(() => __webpack_require__.e(/* import() */ 985).then(__webpack_require__.t.bind(__webpack_require__, 5985, 23)));
 const App_MfeHeader = /*#__PURE__*/index_js_default().lazy(() => __webpack_require__.e(/* import() */ 481).then(__webpack_require__.t.bind(__webpack_require__, 6481, 23)));
 const MfeUser = /*#__PURE__*/index_js_default().lazy(() => __webpack_require__.e(/* import() */ 989).then(__webpack_require__.t.bind(__webpack_require__, 3989, 23)));
+const basePath =  true ? `${window.location.origin}/mfe-shell-book-store/host` : 0;
 function HostApp() {
   const showAlert = event => {
     const {
@@ -80,11 +81,11 @@ function HostApp() {
     };
   }, [showAlert]);
   return /*#__PURE__*/index_js_default().createElement(chunk_ZYFC6VSF/* HashRouter */.I9, {
-    basename: "/"
+    basename: basePath
   }, /*#__PURE__*/index_js_default().createElement(index_js_.Suspense, {
     fallback: /*#__PURE__*/index_js_default().createElement("div", null, "Loading Header...")
   }, /*#__PURE__*/index_js_default().createElement(App_MfeHeader, null), /*#__PURE__*/index_js_default().createElement(react_toastify_esm/* ToastContainer */.N9, null), /*#__PURE__*/index_js_default().createElement(chunk_ZYFC6VSF/* Routes */.BV, null, /*#__PURE__*/index_js_default().createElement(chunk_ZYFC6VSF/* Route */.qh, {
-    path: "/",
+    path: basePath,
     element: /*#__PURE__*/index_js_default().createElement(Home, null)
   }), /*#__PURE__*/index_js_default().createElement(chunk_ZYFC6VSF/* Route */.qh, {
     path: "/checkout",

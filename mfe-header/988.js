@@ -37,6 +37,7 @@
 
 const MfeUser = /*#__PURE__*/(/* unused pure expression or super */ null && (React.lazy(() => __webpack_require__.e(/* import() */ 989).then(__webpack_require__.t.bind(__webpack_require__, 3989, 23)))));
 const MfeCheckout = /*#__PURE__*/(/* unused pure expression or super */ null && (React.lazy(() => __webpack_require__.e(/* import() */ 985).then(__webpack_require__.t.bind(__webpack_require__, 5985, 23)))));
+const basePath =  true ? `${window.location.origin}/mfe-shell-book-store/` : 0;
 function Header() {
   const {
     sharedState
@@ -62,7 +63,7 @@ function Header() {
       mr: 2
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Link, {
-    href: "/",
+    href: `${basePath}/host`,
     sx: linkStyle
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Home__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .A, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .A, {
     variant: "h6",
