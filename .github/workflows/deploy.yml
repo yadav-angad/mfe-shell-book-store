@@ -14,6 +14,11 @@ jobs:
         with:
           node-version: 20
           cache: yarn
+          
+      - name: Configure Git for GitHub Pages
+        run: |
+          git config --global user.email "yadavangad100@gmail.com"
+          git config --global user.name "yadav-angad"
 
       - run: yarn install
       - run: chmod +x deploy.sh
