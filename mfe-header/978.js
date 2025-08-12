@@ -63,7 +63,7 @@ var react_redux_mjs_ = __webpack_require__(7776);
 
 const MfeUser = /*#__PURE__*/(/* unused pure expression or super */ null && (React.lazy(() => __webpack_require__.e(/* import() */ 989).then(__webpack_require__.t.bind(__webpack_require__, 3989, 23)))));
 const MfeCheckout = /*#__PURE__*/(/* unused pure expression or super */ null && (React.lazy(() => __webpack_require__.e(/* import() */ 985).then(__webpack_require__.t.bind(__webpack_require__, 5985, 23)))));
-const basePath =  true ? `${window.location.origin}/mfe-shell-book-store/` : 0;
+const basePath =  true ? `${window.location.origin}/mfe-shell-book-store` : 0;
 function Header() {
   const {
     sharedState
@@ -100,7 +100,7 @@ function Header() {
   }, 'Online Book Store'), /*#__PURE__*/index_js_default().createElement(index_js_.Suspense, {
     fallback: /*#__PURE__*/index_js_default().createElement("div", null, "Loading User...")
   }, /*#__PURE__*/index_js_default().createElement(material_index_js_.Link, {
-    href: "/#/user",
+    href: `${basePath}/host/#/user`,
     underline: "none" // remove default underline
     ,
     sx: linkStyle
@@ -112,7 +112,7 @@ function Header() {
       marginRight: '10px'
     }
   }, ` | `), /*#__PURE__*/index_js_default().createElement(material_index_js_.Link, {
-    href: "/#/checkout",
+    href: `${basePath}/host/#/checkout`,
     underline: "none" // remove default underline
     ,
     sx: linkStyle
