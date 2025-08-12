@@ -23,6 +23,8 @@ jobs:
       - run: yarn install
       - run: chmod +x deploy.sh
 
-      - run: yarn deploy
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist

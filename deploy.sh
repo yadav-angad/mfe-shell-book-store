@@ -1,11 +1,21 @@
 #!/bin/bash
 set -e
 
-# Cleanup
-rm -rf dist
-mkdir dist
+# ==============================
+# CONFIG
+# ==============================
+REPO="yadav-angad/mfe-shell-book-store"
+DEPLOY_DIR="dist"
 
-# Build each package
+# ==============================
+# CLEANUP
+# ==============================
+rm -rf $DEPLOY_DIR
+mkdir $DEPLOY_DIR
+
+# ==============================
+# BUILD MFEs
+# ==============================
 echo "📦 Building MFE-BOOK-GENRES..."
 yarn workspace mfe-book-genres build
 
@@ -21,29 +31,38 @@ yarn workspace mfe-header build
 echo "📦 Building MFE-USER..."
 yarn workspace mfe-user build
 
+# Shared (only if it has a build step)
 echo "📦 Building Shared Context..."
 yarn workspace shared build
 
+# ==============================
+# BUILD HOST (after MFEs)
+# ==============================
 echo "📦 Building Host..."
 yarn workspace host build
 
-# Copy builds to correct subfolders
+# ==============================
+# COPY BUILDS TO DEPLOY DIR
+# ==============================
 echo "📂 Copying builds..."
-mkdir -p dist/mfe-book-genres
-mkdir -p dist/mfe-book-list
-mkdir -p dist/mfe-header
-mkdir -p dist/mfe-user
-mkdir -p dist/shared
+mkdir -p $DEPLOY_DIR/host
+mkdir -p $DEPLOY_DIR/mfe-book-genres
+mkdir -p $DEPLOY_DIR/mfe-book-list
+mkdir -p $DEPLOY_DIR/mfe-checkout
+mkdir -p $DEPLOY_DIR/mfe-header
+mkdir -p $DEPLOY_DIR/mfe-user
 
-cp -R host/dist/* dist/
-cp -R mfe-book-genres/dist/* dist/mfe-book-genres/
-cp -R mfe-book-list/dist/* dist/mfe-book-list/
-cp -R mfe-header/dist/* dist/mfe-header/
-cp -R mfe-user/dist/* dist/mfe-user/
-cp -R shared/dist/* dist/shared/
+cp -R host/dist/* $DEPLOY_DIR/host/
+cp -R mfe-book-genres/dist/* $DEPLOY_DIR/mfe-book-genres/
+cp -R mfe-book-list/dist/* $DEPLOY_DIR/mfe-book-list/
+cp -R mfe-checkout/dist/* $DEPLOY_DIR/mfe-checkout/
+cp -R mfe-header/dist/* $DEPLOY_DIR/mfe-header/
+cp -R mfe-user/dist/* $DEPLOY_DIR/mfe-user/
 
-# Deploy to GitHub Pages
+# ==============================
+# DEPLOY TO GH PAGES
+# ==============================
 echo "🚀 Deploying to GitHub Pages..."
-npx gh-pages -d dist -r https://x-access-token:${GH_TOKEN}@github.com/yadav-angad/mfe-shell-book-store.git
+npx gh-pages -d $DEPLOY_DIR -r https://x-access-token:${GITHUB_TOKEN}@github.com/$REPO.git
 
 echo "✅ Deployment complete!"
