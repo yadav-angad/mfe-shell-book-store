@@ -40,12 +40,12 @@ module.exports = {
   },
   devServer: {
     hot: true,
-    static: path.join(__dirname, '../../dist/mfe-user'),
+    static: path.join(__dirname, 'dist'),
     port: 3006,
     liveReload: false,
   },
   output: {
-    publicPath: 'https://yadav-angad.github.io/mfe-shell-book-store/mfe-user',
+    publicPath: '/mfe-shell-book-store/mfe-user',
     clean: true,
   },
   module: {

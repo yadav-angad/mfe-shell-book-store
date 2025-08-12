@@ -10,11 +10,11 @@ module.exports = {
   devServer: {
     port: 3001, // Port for your shared-context
     hot: true,
-    static: path.join(__dirname, '../../dist/shared'),
+    static: path.join(__dirname, 'dist'),
     liveReload: false,
   },
   output: {
-    publicPath: 'https://yadav-angad.github.io/mfe-shell-book-store/shared',
+    publicPath: '/mfe-shell-book-store/shared',
   },
    resolve: {
     alias: {

@@ -39,12 +39,12 @@ module.exports = {
   },
   devServer: {
     hot: false,
-    static: path.join(__dirname, '../../dist/host'),
+    static: path.join(__dirname, 'dist'),
     port: 3000,
     historyApiFallback: true,
   },
   output: {
-    publicPath: 'https://yadav-angad.github.io/mfe-shell-book-store/host/',
+    publicPath: '/mfe-shell-book-store/',
     clean: true,
   },
   module: {

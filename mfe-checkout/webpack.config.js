@@ -40,13 +40,13 @@ module.exports = {
   },
   devServer: {
     hot: true,
-    static: path.join(__dirname, '../../dist/mfe-checkout'),
+    static: path.join(__dirname, 'dist'),
     port: 3003,
     liveReload: false,
     historyApiFallback: true,
   },
   output: {
-    publicPath: 'https://yadav-angad.github.io/mfe-shell-book-store/mfe-checkout',
+    publicPath: '/mfe-shell-book-store/mfe-checkout',
     clean: true,
   },
   module: {

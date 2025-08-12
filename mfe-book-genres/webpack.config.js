@@ -40,12 +40,12 @@ module.exports = {
   },
   devServer: {
     hot: true,
-    static: path.join(__dirname, '../../dist/mfe-book-genres'),
+    static: path.join(__dirname, 'dist'),
     port: 3004,
     liveReload: false,
   },
   output: {
-    publicPath: 'https://yadav-angad.github.io/mfe-shell-book-store/mfe-book-genres/',
+    publicPath: '/mfe-shell-book-store/book-genres/',
     clean: true,
   },
   module: {

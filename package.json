@@ -4,6 +4,7 @@
   "description": "experiments with module federation in React with Webpack5",
   "main": "index.js",
   "repository": "https://github.com/yadav-angad/mfe-shell-book-store",
+  "homepage": "https://yadav-angad.github.io/mfe-shell-book-store",
   "author": "Angad Yadav",
   "license": "MIT",
   "private": true,
