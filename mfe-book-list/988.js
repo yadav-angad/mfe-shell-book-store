@@ -44,7 +44,7 @@ const App = () => {
     headerName: 'Cover',
     width: 80,
     renderCell: params => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Avatar, {
-      src: 'params.value',
+      src: params.value,
       variant: "square",
       sx: {
         width: 70,

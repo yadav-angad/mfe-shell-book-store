@@ -44,7 +44,7 @@ const App = () => {
     headerName: 'Cover',
     width: 80,
     renderCell: params => /*#__PURE__*/index_js_default().createElement(material_index_js_.Avatar, {
-      src: 'params.value',
+      src: params.value,
       variant: "square",
       sx: {
         width: 70,
