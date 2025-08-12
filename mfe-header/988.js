@@ -98,7 +98,7 @@ function Header() {
       marginRight: '10px'
     }
   }, ` | `), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Link, {
-    href: "/#/checkout",
+    href: `${basePath}/host/#/checkout`,
     underline: "none" // remove default underline
     ,
     sx: linkStyle

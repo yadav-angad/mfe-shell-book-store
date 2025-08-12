@@ -124,7 +124,7 @@ function Header() {
       marginRight: '10px'
     }
   }, ` | `), /*#__PURE__*/index_js_default().createElement(material_index_js_.Link, {
-    href: "/#/checkout",
+    href: `${basePath}/host/#/checkout`,
     underline: "none" // remove default underline
     ,
     sx: linkStyle
