@@ -3,6 +3,7 @@ const path = require('path');
 const { ModuleFederationPlugin } = require("webpack").container;
 const dependencies = require("./package.json").dependencies;
 const REMOTE_CONFIG = require('../shared/src/path/remote-config.js');
+const isLocalhost = false; 
 
 module.exports = {
   entry: "./src/context/SharedContextProvider.js", // Or a common entry point
