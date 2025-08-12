@@ -5,8 +5,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "build:dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack serve"
+    "dev": "webpack serve --mode development",
+    "start": "webpack serve --mode production"
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
