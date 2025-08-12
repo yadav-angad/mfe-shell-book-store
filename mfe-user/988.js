@@ -1,6 +1,13 @@
 "use strict";
 (self["webpackChunkmfe_user"] = self["webpackChunkmfe_user"] || []).push([[988],{
 
+/***/ 2994:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "fc20b535b644b0e71e4d.jpg";
+
+/***/ }),
+
 /***/ 5988:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -18,10 +25,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var sharedContext_store__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sharedContext_store__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var sharedContext_EventBusService__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3099);
 /* harmony import */ var sharedContext_EventBusService__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(sharedContext_EventBusService__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_Angad_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(2994);
 
 
 
 
+
+ // adjust path
 
 const App = () => {
   const {
@@ -83,13 +93,15 @@ const App = () => {
     alignItems: "center",
     mb: 3
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Avatar, {
+    src: _assets_Angad_jpg__WEBPACK_IMPORTED_MODULE_5__,
+    variant: "square",
     sx: {
-      width: 80,
-      height: 80,
-      bgcolor: "primary.main",
+      width: 150,
+      height: 150,
+      borderRadius: 100,
       mb: 2
     }
-  }, formData.firstName ? formData.firstName[0] : "U"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Typography, {
     variant: "h5"
   }, "Edit Profile")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Box, {
     component: "form",

@@ -1,7 +1,7 @@
 "use strict";
-(self["webpackChunkmfe_user"] = self["webpackChunkmfe_user"] || []).push([[319],{
+(self["webpackChunkmfe_user"] = self["webpackChunkmfe_user"] || []).push([[342],{
 
-/***/ 5319:
+/***/ 8573:
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 
@@ -16,11 +16,15 @@ var material_index_js_ = __webpack_require__(6863);
 var store = __webpack_require__(999);
 // EXTERNAL MODULE: remote sharedContext/EventBusService
 var EventBusService = __webpack_require__(3099);
+;// ./src/assets/Angad.jpg
+const Angad_namespaceObject = __webpack_require__.p + "fc20b535b644b0e71e4d.jpg";
 ;// ./src/App.js
 
 
 
 
+
+ // adjust path
 
 const App = () => {
   const {
@@ -82,13 +86,15 @@ const App = () => {
     alignItems: "center",
     mb: 3
   }, /*#__PURE__*/index_js_default().createElement(material_index_js_.Avatar, {
+    src: Angad_namespaceObject,
+    variant: "square",
     sx: {
-      width: 80,
-      height: 80,
-      bgcolor: "primary.main",
+      width: 150,
+      height: 150,
+      borderRadius: 100,
       mb: 2
     }
-  }, formData.firstName ? formData.firstName[0] : "U"), /*#__PURE__*/index_js_default().createElement(material_index_js_.Typography, {
+  }), /*#__PURE__*/index_js_default().createElement(material_index_js_.Typography, {
     variant: "h5"
   }, "Edit Profile")), /*#__PURE__*/index_js_default().createElement(material_index_js_.Box, {
     component: "form",
@@ -297,4 +303,4 @@ react_dom_index_js_default().render(/*#__PURE__*/index_js_default().createElemen
 /***/ })
 
 }]);
-//# sourceMappingURL=319.js.map
+//# sourceMappingURL=342.js.map
