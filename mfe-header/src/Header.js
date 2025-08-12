@@ -73,7 +73,7 @@ export default function Header() {
             {` | `}
           </Typography>
           <Link
-            href="/#/checkout"
+            href={`${basePath}/host/#/checkout`}
             underline="none" // remove default underline
             sx={linkStyle}
           >
