@@ -1,7 +1,7 @@
 "use strict";
-(self["webpackChunkhost"] = self["webpackChunkhost"] || []).push([[80],{
+(self["webpackChunkhost"] = self["webpackChunkhost"] || []).push([[491],{
 
-/***/ 7080:
+/***/ 2491:
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 
@@ -83,7 +83,7 @@ function HostApp() {
     basename: "/"
   }, /*#__PURE__*/index_js_default().createElement(index_js_.Suspense, {
     fallback: /*#__PURE__*/index_js_default().createElement("div", null, "Loading Header...")
-  }, /*#__PURE__*/index_js_default().createElement(App_MfeHeader, null), /*#__PURE__*/index_js_default().createElement(react_toastify_esm/* ToastContainer */.N9, null), /*#__PURE__*/index_js_default().createElement(chunk_ZYFC6VSF/* Routes */.BV, null, /*#__PURE__*/index_js_default().createElement(chunk_ZYFC6VSF/* Route */.qh, {
+  }, /*#__PURE__*/index_js_default().createElement(App_MfeHeader, null), /*#__PURE__*/index_js_default().createElement(react_toastify_esm/* ToastContainer */.N9, null), /*#__PURE__*/index_js_default().createElement(material_index_js_.Card, null, /*#__PURE__*/index_js_default().createElement(chunk_ZYFC6VSF/* Routes */.BV, null, /*#__PURE__*/index_js_default().createElement(chunk_ZYFC6VSF/* Route */.qh, {
     path: "/",
     element: /*#__PURE__*/index_js_default().createElement(Home, null)
   }), /*#__PURE__*/index_js_default().createElement(chunk_ZYFC6VSF/* Route */.qh, {
@@ -96,7 +96,7 @@ function HostApp() {
     element: /*#__PURE__*/index_js_default().createElement((index_js_default()).Suspense, {
       fallback: /*#__PURE__*/index_js_default().createElement("div", null, "Loading MFE...")
     }, /*#__PURE__*/index_js_default().createElement(MfeUser, null))
-  }))));
+  })))));
 }
 // EXTERNAL MODULE: consume shared module (default) react-dom@^18.2.0 (singleton) (fallback: ../node_modules/react-dom/index.js)
 var react_dom_index_js_ = __webpack_require__(3476);
@@ -105,7 +105,57 @@ var react_dom_index_js_default = /*#__PURE__*/__webpack_require__.n(react_dom_in
 var SharedContextProvider = __webpack_require__(8855);
 // EXTERNAL MODULE: remote sharedContext/store
 var store = __webpack_require__(999);
+// EXTERNAL MODULE: ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
+var injectStylesIntoStyleTag = __webpack_require__(5292);
+var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
+// EXTERNAL MODULE: ../node_modules/style-loader/dist/runtime/styleDomAPI.js
+var styleDomAPI = __webpack_require__(9893);
+var styleDomAPI_default = /*#__PURE__*/__webpack_require__.n(styleDomAPI);
+// EXTERNAL MODULE: ../node_modules/style-loader/dist/runtime/insertBySelector.js
+var insertBySelector = __webpack_require__(9383);
+var insertBySelector_default = /*#__PURE__*/__webpack_require__.n(insertBySelector);
+// EXTERNAL MODULE: ../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js
+var setAttributesWithoutAttributes = __webpack_require__(6884);
+var setAttributesWithoutAttributes_default = /*#__PURE__*/__webpack_require__.n(setAttributesWithoutAttributes);
+// EXTERNAL MODULE: ../node_modules/style-loader/dist/runtime/insertStyleElement.js
+var insertStyleElement = __webpack_require__(9088);
+var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleElement);
+// EXTERNAL MODULE: ../node_modules/style-loader/dist/runtime/styleTagTransform.js
+var styleTagTransform = __webpack_require__(7997);
+var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
+// EXTERNAL MODULE: ../node_modules/css-loader/dist/cjs.js!./src/index.css
+var cjs_js_src = __webpack_require__(9071);
+;// ./src/index.css
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (styleTagTransform_default());
+options.setAttributes = (setAttributesWithoutAttributes_default());
+
+      options.insert = insertBySelector_default().bind(null, "head");
+    
+options.domAPI = (styleDomAPI_default());
+options.insertStyleElement = (insertStyleElement_default());
+
+var update = injectStylesIntoStyleTag_default()(cjs_js_src/* default */.A, options);
+
+
+
+
+       /* harmony default export */ const src = (cjs_js_src/* default */.A && cjs_js_src/* default */.A.locals ? cjs_js_src/* default */.A.locals : undefined);
+
 ;// ./src/bootstrap.js
+
 
 
 
@@ -116,7 +166,31 @@ react_dom_index_js_default().render(/*#__PURE__*/index_js_default().createElemen
   store: store.store
 }, /*#__PURE__*/index_js_default().createElement(SharedContextProvider.SharedContextProvider, null, /*#__PURE__*/index_js_default().createElement(HostApp, null))), document.getElementById('root'));
 
+/***/ }),
+
+/***/ 9071:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4942);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(278);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `body {
+    margin: 0px;
+}`, "",{"version":3,"sources":["webpack://./src/index.css"],"names":[],"mappings":"AAAA;IACI,WAAW;AACf","sourcesContent":["body {\n    margin: 0px;\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
 /***/ })
 
 }]);
-//# sourceMappingURL=80.js.map
+//# sourceMappingURL=491.js.map

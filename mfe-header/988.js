@@ -44,6 +44,14 @@ function Header() {
   } = (0,sharedContext_useSharedContext__WEBPACK_IMPORTED_MODULE_8__.useSharedContext)();
   //Initialize the store to access the cart state
   (0,react_redux__WEBPACK_IMPORTED_MODULE_10__.useSelector)(state => state?.cart);
+  const [anchorEl, setAnchorEl] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_AppBar__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A, {
     position: "static"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Toolbar__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .A, {
@@ -54,7 +62,38 @@ function Header() {
     sx: {
       mr: 2
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .A, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .A, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Menu__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .A, {
+    onClick: handleClick
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Menu, {
+    id: "basic-menu",
+    anchorEl: anchorEl,
+    open: open,
+    onClose: handleClose,
+    slotProps: {
+      list: {
+        'aria-labelledby': 'basic-button',
+        sx: {
+          py: 0
+        }
+      }
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Link, {
+    href: `${basePath}/#/user`,
+    onClick: handleClose,
+    sx: linkStyleUnderLineNone
+  }, `My Account`), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Link, {
+    href: `${basePath}/#/user`,
+    onClick: handleClose,
+    sx: linkStyleUnderLineNone
+  }, `Purchase Hostory`), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Link, {
+    href: `${basePath}/#/user`,
+    onClick: handleClose,
+    sx: linkStyleUnderLineNone
+  }, `About Us`), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Link, {
+    href: `${basePath}/#/user`,
+    onClick: handleClose,
+    sx: linkStyleUnderLineNone
+  }, `Help`))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .A, {
     size: "large",
     edge: "start",
     color: "inherit",
@@ -64,7 +103,7 @@ function Header() {
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Link, {
     href: `${basePath}`,
-    sx: linkStyle
+    sx: linkStyleUnderLine
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Home__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .A, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .A, {
     variant: "h6",
     component: "div",
@@ -74,47 +113,39 @@ function Header() {
   }, 'Online Book Store'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react__WEBPACK_IMPORTED_MODULE_0__.Suspense, {
     fallback: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Loading User...")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Link, {
-    href: `${basePath}/#/user`,
-    underline: "none" // remove default underline
-    ,
-    sx: linkStyle
-  }, `My Account`), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .A, {
-    variant: "h6",
-    sx: {
-      color: 'gray',
-      marginLeft: '10px',
-      marginRight: '10px'
-    }
-  }, ` | `), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Link, {
     href: `${basePath}/#/checkout`,
     underline: "none" // remove default underline
     ,
-    sx: linkStyle
-  }, `Help`), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Typography__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .A, {
-    variant: "h6",
-    sx: {
-      color: 'gray',
-      marginLeft: '10px',
-      marginRight: '10px'
-    }
-  }, ` | `), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Link, {
-    href: `${basePath}/#/checkout`,
-    underline: "none" // remove default underline
-    ,
-    sx: linkStyle
+    sx: linkStyleUnderLine
   }, `Cart (${sharedContext_store__WEBPACK_IMPORTED_MODULE_9__.store?.getState().cart?.length || 0})`))));
 }
-const linkStyle = {
+const linkStyleUnderLine = {
   cursor: "pointer",
   color: "inherit",
   // inherit from parent or theme
   marginLeft: "10px",
   marginRight: "10px",
+  display: 'flex',
   fontSize: theme => theme.typography.h6.fontSize,
   fontWeight: theme => theme.typography.h6.fontWeight,
   lineHeight: theme => theme.typography.h6.lineHeight,
   "&:hover": {
     textDecoration: "underline"
+  }
+};
+const linkStyleUnderLineNone = {
+  cursor: "pointer",
+  color: "inherit",
+  // inherit from parent or theme
+  padding: '16px',
+  display: 'flex',
+  textDecorationLine: 'none',
+  'fontFamily': ` "Roboto", "Helvetica", "Arial", sans-serif`,
+  fontWeight: 500,
+  fontSize: 'Large',
+  "&:hover": {
+    textDecorationLine: "none",
+    backgroundColor: '#F2F2F2'
   }
 };
 

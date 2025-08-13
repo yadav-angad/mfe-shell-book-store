@@ -69,7 +69,7 @@ module.exports = new Promise((resolve, reject) => {
 
 // Use dynamic import here to allow webpack to interface with module federation code
 window.remote1Url = 'http://localhost:3001';
-Promise.all(/* import() */[__webpack_require__.e(759), __webpack_require__.e(232), __webpack_require__.e(476), __webpack_require__.e(80)]).then(__webpack_require__.bind(__webpack_require__, 7080));
+Promise.all(/* import() */[__webpack_require__.e(759), __webpack_require__.e(232), __webpack_require__.e(476), __webpack_require__.e(491)]).then(__webpack_require__.bind(__webpack_require__, 2491));
 
 /***/ }),
 
@@ -289,14 +289,14 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 	/* webpack/runtime/remotes loading */
 /******/ 	(() => {
 /******/ 		var chunkMapping = {
-/******/ 			"80": [
+/******/ 			"481": [
+/******/ 				6481
+/******/ 			],
+/******/ 			"491": [
 /******/ 				999,
 /******/ 				3099,
 /******/ 				8855,
 /******/ 				9739
-/******/ 			],
-/******/ 			"481": [
-/******/ 				6481
 /******/ 			],
 /******/ 			"853": [
 /******/ 				5853
@@ -590,15 +590,15 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 		};
 /******/ 		// no consumes in initial chunks
 /******/ 		var chunkMapping = {
-/******/ 			"80": [
-/******/ 				6863,
-/******/ 				7776
-/******/ 			],
 /******/ 			"232": [
 /******/ 				3232
 /******/ 			],
 /******/ 			"476": [
 /******/ 				3476
+/******/ 			],
+/******/ 			"491": [
+/******/ 				6863,
+/******/ 				7776
 /******/ 			]
 /******/ 		};
 /******/ 		var startedInstallModules = {};
