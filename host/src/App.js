@@ -3,7 +3,7 @@ import React, { Suspense } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import { EventBusService } from "sharedContext/EventBusService";
-import { Alert, Button } from "@mui/material";
+import { Alert, Button, Card } from "@mui/material";
 import { ToastContainer, toast } from 'react-toastify';
 import DeleteIcon from '@mui/icons-material/Delete';
 import "react-toastify/dist/ReactToastify.css";
@@ -30,30 +30,32 @@ export default function HostApp() {
       <Suspense fallback={<div>Loading Header...</div>}>
         <MfeHeader />
         <ToastContainer />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Home />
-            }
-          />
-          <Route
-            path="/checkout"
-            element={
-              <React.Suspense fallback={<div>Loading MFE...</div>}>
-                <MfeCheckout />
-              </React.Suspense>
-            }
-          />
-          <Route
-            path="/user"
-            element={
-              <React.Suspense fallback={<div>Loading MFE...</div>}>
-                <MfeUser />
-              </React.Suspense>
-            }
-          />
-        </Routes>
+        <Card>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Home />
+              }
+            />
+            <Route
+              path="/checkout"
+              element={
+                <React.Suspense fallback={<div>Loading MFE...</div>}>
+                  <MfeCheckout />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/user"
+              element={
+                <React.Suspense fallback={<div>Loading MFE...</div>}>
+                  <MfeUser />
+                </React.Suspense>
+              }
+            />
+          </Routes>
+        </Card>
       </Suspense>
     </Router>
   );
